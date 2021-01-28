@@ -24,7 +24,6 @@ public class Sheep : GameEntity
     {
         Vector3 moveDirection = Vector3.zero;
 
-
         moveDirection += GetAverageDirection() * avergaeDirectionMultiplier;
         moveDirection += GetAvoidDirection() * avoidDirectionMultiplier;
         moveDirection += GetCohesionDirection(cohesionAmount);
@@ -40,6 +39,8 @@ public class Sheep : GameEntity
         {
             moveDirection += (transform.position - level.pen.transform.position).normalized * avoidPenMultiplier;
         }
+
+        moveDirection += GetAvoidObjectsDirection(dt);
 
         return moveDirection.normalized;
     }

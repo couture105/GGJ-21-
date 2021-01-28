@@ -106,7 +106,16 @@ MonoBehaviour:
   isThreatening: 1
   influenceRadius: 6
   avoidRadius: 2
+  useAvoidObjects: 1
+  avoidObjectDirectionFallOffSpeed: 20
+  avoidObjectMultiplier: 255
+  scanAngle: {x: 60, y: -60}
+  avoidForceProximityMultiplier: 100
+  avoidObjectsScanDistance: 1.5
+  currentAvoidForce: 0
   speed: 0
+  useExternalDirection: 1
   startPos: {x: 0, y: 0, z: 0}
   maxWanderDistance: 24
-  changeDiretionTime: 1
+  changeDirectionTime: 1
+  externalDirectionMultiplier: 5

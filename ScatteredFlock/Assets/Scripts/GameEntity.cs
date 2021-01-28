@@ -19,8 +19,17 @@ public class GameEntity : MonoBehaviour
     public float influenceRadius = 6.0f;
     public float avoidRadius = 0.5f;
 
+    public bool useAvoidObjects;
+    public float avoidObjectDirectionFallOffSpeed = 20f;
+    public float avoidObjectMultiplier = 20f;
+    public Vector2 scanAngle = new Vector2(60, -60);
+    public float avoidForceProximityMultiplier = 100;
+    public float avoidObjectsScanDistance = 2.0f;
+    public float currentAvoidForce = 0;
+
     public float speed = 0;
     protected Vector3 lastPos = Vector3.zero;
+    protected Vector3 avoidObjectDirection = Vector3.zero;
 
     public virtual void DeltaUpdate(float dt)
     {
@@ -46,6 +55,9 @@ public class GameEntity : MonoBehaviour
     protected virtual Vector3 MoveDirection(float dt)
     {
         Vector3 moveDirection = Vector3.zero;
+
+        moveDirection += GetAvoidObjectsDirection(dt);
+
         return moveDirection.normalized;
     }
 
@@ -89,6 +101,95 @@ public class GameEntity : MonoBehaviour
         Vector3 dir = (transform.position - lastPos) / dt;
         currentHeading = dir.normalized;
         lastPos = transform.position;
+    }
+
+    protected Vector3 GetAvoidObjectsDirection(float dt)
+    {
+        Vector3 moveDirection = Vector3.zero;
+        if (useAvoidObjects)
+        {
+            Vector3 avoidObjectDirectionT = ScanForObjectsToAvoid().normalized * avoidObjectMultiplier;
+            if (avoidObjectDirectionT.magnitude > 0)
+            {
+                avoidObjectDirection = avoidObjectDirectionT;
+            }
+            avoidObjectDirection = Vector3.Lerp(avoidObjectDirection, Vector3.zero, dt * avoidObjectDirectionFallOffSpeed);
+            if (avoidObjectDirection.magnitude < 0.01f)
+            {
+                avoidObjectDirection = Vector3.zero;
+            }
+            moveDirection += avoidObjectDirection;
+        }
+
+        return moveDirection;
+    }
+
+    protected Vector3 ScanForObjectsToAvoid()
+    {
+        Vector2 avgDirection = Vector2.zero;
+        Vector3 longestOpenPathDirection = Vector3.zero;
+        Vector3 longestClosedPathDirection = Vector3.zero;
+        bool hitSomething = false;
+        currentAvoidForce = 1;
+        float lastHitDistance = 0;
+
+        float angle = Mathf.Atan2(currentHeading.y, currentHeading.x) * Mathf.Rad2Deg;
+        Vector3 dirOne = DegreeToVector2(scanAngle.x + angle);
+        dirOne = (currentHeading + dirOne).normalized * avoidObjectsScanDistance;
+        Vector3 dirTwo = DegreeToVector2(scanAngle.y + angle);
+        dirTwo = (currentHeading + dirTwo).normalized * avoidObjectsScanDistance;
+
+        for (int t = 0; t < 3; t++)
+        {
+            RaycastHit2D raycastHit2DResult;
+            Vector3 currentRayDir = Vector3.zero;
+            if (t == 0)
+            {
+                currentRayDir = currentHeading * (avoidObjectsScanDistance + 0.5f);
+                raycastHit2DResult = Physics2D.Raycast(this.transform.position, currentRayDir, avoidObjectsScanDistance + 0.5f);
+                Debug.DrawRay(this.transform.position, currentRayDir, Color.blue, 0.1f);
+            }
+            else if (t == 1)
+            {
+                currentRayDir = dirOne;
+                raycastHit2DResult = Physics2D.Raycast(this.transform.position, dirOne, avoidObjectsScanDistance);
+                Debug.DrawRay(this.transform.position, currentRayDir, Color.red, 0.1f);
+            }
+            else
+            {
+                currentRayDir = dirTwo;
+                raycastHit2DResult = Physics2D.Raycast(this.transform.position, dirTwo, avoidObjectsScanDistance);
+                Debug.DrawRay(this.transform.position, currentRayDir, Color.green, 0.1f);
+            }
+            if (raycastHit2DResult.collider != null)
+            {
+                hitSomething = true;
+                Debug.Log("Hit something");
+                float dist = Vector3.Distance(transform.position, raycastHit2DResult.point);
+                if (dist > lastHitDistance)
+                {
+                    lastHitDistance = dist;
+                    longestClosedPathDirection = -currentRayDir;
+                }
+            }
+            else
+            {
+                longestOpenPathDirection = currentRayDir;
+            }
+
+        }
+        if (!hitSomething)
+        {
+            return Vector2.zero;
+        }
+        else if (longestOpenPathDirection == Vector3.zero)
+        {
+            return longestClosedPathDirection;
+        }
+        else
+        {
+            return longestOpenPathDirection;
+        }
     }
 
     public Vector2 RadianToVector2(float radian)

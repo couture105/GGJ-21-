@@ -30,6 +30,8 @@ public class Wolf : GameEntity
             moveDirection += (startPos - transform.position).normalized;
         }
 
+        moveDirection += GetAvoidObjectsDirection(dt);
+
         return moveDirection.normalized;
     }
 

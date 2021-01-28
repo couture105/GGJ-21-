@@ -106,6 +106,13 @@ MonoBehaviour:
   isThreatening: 0
   influenceRadius: 2
   avoidRadius: 1.5
+  useAvoidObjects: 1
+  avoidObjectDirectionFallOffSpeed: 20
+  avoidObjectMultiplier: 255
+  scanAngle: {x: 60, y: -60}
+  avoidForceProximityMultiplier: 100
+  avoidObjectsScanDistance: 1.5
+  currentAvoidForce: 0
   speed: 0
   useAverageDirection: 1
   useAvoidDirection: 1

@@ -43,12 +43,8 @@ public class Shepherd : GameEntity
             moveDirection = dir;
         }
 
-        return moveDirection.normalized;
-    }
+        moveDirection += GetAvoidObjectsDirection(dt);
 
-    protected override void CalculateHeading(float dt)
-    {
-        currentHeading = Vector3.zero;
-        lastPos = transform.position;
+        return moveDirection.normalized;
     }
 }
