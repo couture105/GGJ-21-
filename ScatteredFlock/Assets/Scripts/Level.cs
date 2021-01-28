@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -28,6 +29,11 @@ public class Level : MonoBehaviour
     public List<Sheep> sheeps;
     public List<Wolf> wolfs;
     public Shepherd shepherd;
+
+    public List<SheepSpawner> sheepSpawners;
+    public List<WolfSpawner> wolfSpawners;
+    int wolfSpawnerIndex = 0;
+    int sheepSpawnerIndex = 0;
 
     public int activeSheeps = 0;
     public int score = 0;
@@ -64,6 +70,20 @@ public class Level : MonoBehaviour
 
     void Initialize()
     {
+        if (sheepSpawners != null)
+        {
+            sheepSpawners.Clear();
+            sheepSpawners = null;
+        }
+        sheepSpawners = FindObjectsOfType<SheepSpawner>().ToList();
+
+        if (wolfSpawners != null)
+        {
+            wolfSpawners.Clear();
+            wolfSpawners = null;
+        }
+        wolfSpawners = FindObjectsOfType<WolfSpawner>().ToList();
+
         if (shepherd != null)
         {
             GameObject.Destroy(shepherd.gameObject);
@@ -100,11 +120,28 @@ public class Level : MonoBehaviour
         for (int i = 0; i < maxWolfs; i++)
         {
             Wolf wolf = GameObject.Instantiate(wolfPrefab, wolfsParent).GetComponent<Wolf>();
-            wolf.transform.position = new Vector3(Random.Range(-wolfSpawnRadius, wolfSpawnRadius), Random.Range(-wolfSpawnRadius, wolfSpawnRadius), 0);
+            
             wolf.active = true;
             wolf.level = this;
-            wolf.startPos = wolf.transform.position;
             wolfs.Add(wolf);
+
+            if (wolfSpawners != null && wolfSpawners.Count > 0)
+            {
+                WolfSpawner spawner = wolfSpawners[wolfSpawnerIndex];
+                wolf.transform.position = spawner.transform.position + 
+                    new Vector3(Random.Range(-spawner.spawnRadius, spawner.spawnRadius), Random.Range(-spawner.spawnRadius, spawner.spawnRadius), 0);
+                wolfSpawnerIndex++;
+                if (wolfSpawnerIndex >= wolfSpawners.Count)
+                {
+                    wolfSpawnerIndex = 0;
+                }
+            }
+            else
+            {
+                wolf.transform.position = new Vector3(Random.Range(-wolfSpawnRadius, wolfSpawnRadius), Random.Range(-wolfSpawnRadius, wolfSpawnRadius), 0);
+            }
+
+            wolf.startPos = wolf.transform.position;
         }
         score = 0;
 
@@ -123,8 +160,23 @@ public class Level : MonoBehaviour
             Sheep sheep = sheeps[i];
             if (!sheep.active)
             {
-                sheep.transform.position = new Vector3(Random.Range(-sheepSpawnRadius, sheepSpawnRadius),
-                    Random.Range(-sheepSpawnRadius, sheepSpawnRadius), 0);
+                if (sheepSpawners != null && sheepSpawners.Count > 0)
+                {
+                    SheepSpawner spawner = sheepSpawners[sheepSpawnerIndex];
+                    sheep.transform.position = spawner.transform.position +
+                        new Vector3(Random.Range(-spawner.spawnRadius, spawner.spawnRadius), Random.Range(-spawner.spawnRadius, spawner.spawnRadius), 0);
+                    sheepSpawnerIndex++;
+                    if (sheepSpawnerIndex >= sheepSpawners.Count)
+                    {
+                        sheepSpawnerIndex = 0;
+                    }
+                }
+                else
+                {
+                    sheep.transform.position = new Vector3(Random.Range(-sheepSpawnRadius, sheepSpawnRadius),
+                        Random.Range(-sheepSpawnRadius, sheepSpawnRadius), 0);
+                }
+            
                 sheep.active = true;
                 activeSheeps++;
             }

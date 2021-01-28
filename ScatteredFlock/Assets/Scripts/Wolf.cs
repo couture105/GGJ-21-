@@ -17,7 +17,7 @@ public class Wolf : GameEntity
         changeDirectionTimer += dt;
         if (changeDirectionTimer > changeDirectionTime)
         {
-            lastMoveDirection = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
+            lastMoveDirection = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0);
             changeDirectionTimer = 0;
         }
 

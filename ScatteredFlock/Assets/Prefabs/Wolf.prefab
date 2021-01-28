@@ -116,6 +116,6 @@ MonoBehaviour:
   speed: 0
   useExternalDirection: 1
   startPos: {x: 0, y: 0, z: 0}
-  maxWanderDistance: 24
+  maxWanderDistance: 4
   changeDirectionTime: 1
   externalDirectionMultiplier: 5
