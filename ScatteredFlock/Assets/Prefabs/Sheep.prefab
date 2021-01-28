@@ -119,7 +119,7 @@ MonoBehaviour:
   useExternalDirection: 1
   useCohesion: 1
   scanRadius: 4
-  cohesionAmount: 0.5
+  cohesionAmount: 0.3
   avergaeDirectionMultiplier: 3
   avoidDirectionMultiplier: 10
   externalDirectionMultiplier: 5

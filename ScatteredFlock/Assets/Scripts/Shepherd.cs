@@ -40,10 +40,14 @@ public class Shepherd : GameEntity
         if (dir.magnitude > moveRadius)
         {
             dir = dir / dt;
-            moveDirection = dir;
+            moveDirection = dir.normalized;
         }
 
-        moveDirection += GetAvoidObjectsDirection(dt);
+        Vector3 avoidDirection = GetAvoidObjectsDirection(dt);
+        if (avoidObjectDirection.magnitude > 0)
+        {
+            moveDirection += GetAvoidObjectsDirection(dt);
+        }
 
         return moveDirection.normalized;
     }

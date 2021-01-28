@@ -147,24 +147,23 @@ public class GameEntity : MonoBehaviour
             {
                 currentRayDir = currentHeading * (avoidObjectsScanDistance + 0.5f);
                 raycastHit2DResult = Physics2D.Raycast(this.transform.position, currentRayDir, avoidObjectsScanDistance + 0.5f);
-                Debug.DrawRay(this.transform.position, currentRayDir, Color.blue, 0.1f);
+                //Debug.DrawRay(this.transform.position, currentRayDir, Color.blue, 0.1f);
             }
             else if (t == 1)
             {
                 currentRayDir = dirOne;
                 raycastHit2DResult = Physics2D.Raycast(this.transform.position, dirOne, avoidObjectsScanDistance);
-                Debug.DrawRay(this.transform.position, currentRayDir, Color.red, 0.1f);
+                //Debug.DrawRay(this.transform.position, currentRayDir, Color.red, 0.1f);
             }
             else
             {
                 currentRayDir = dirTwo;
                 raycastHit2DResult = Physics2D.Raycast(this.transform.position, dirTwo, avoidObjectsScanDistance);
-                Debug.DrawRay(this.transform.position, currentRayDir, Color.green, 0.1f);
+                //Debug.DrawRay(this.transform.position, currentRayDir, Color.green, 0.1f);
             }
             if (raycastHit2DResult.collider != null)
             {
                 hitSomething = true;
-                Debug.Log("Hit something");
                 float dist = Vector3.Distance(transform.position, raycastHit2DResult.point);
                 if (dist > lastHitDistance)
                 {
