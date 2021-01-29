@@ -25,6 +25,7 @@ public class Sheep : GameEntity
 
     public float maxWanderDistance = 256;
     public SheepType type;
+    public bool respawns = true;
 
     public override void Start()
     {

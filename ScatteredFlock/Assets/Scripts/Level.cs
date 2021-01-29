@@ -176,9 +176,38 @@ public class Level : MonoBehaviour
             Sheep sheep = sheeps[i];
             if (!sheep.active)
             {
-                sheep.transform.position = sheep.startPos;
-                sheep.active = true;
-                activeSheeps++;
+                if (sheep.respawns)
+                {
+                    sheep.transform.position = sheep.startPos;
+                    sheep.active = true;
+                    activeSheeps++;
+                }
+                else
+                {
+                    int startIndex = Random.Range(0, sheepSpawners.Count);
+                    bool spawned = false;
+                    for (int j = startIndex; j < sheepSpawners.Count; j++)
+                    {
+                        if (sheepSpawners[j].respawns && (sheepSpawners[j].sheepType == sheep.type))
+                        {
+                            sheepSpawners[j].RespawnSheep(sheep);
+                            spawned = true;
+                            break;
+                        }
+                    }
+                    if (!spawned)
+                    {
+                        for (int j = 0; j < startIndex; j++)
+                        {
+                            if (sheepSpawners[j].respawns && (sheepSpawners[j].sheepType == sheep.type))
+                            {
+                                sheepSpawners[j].RespawnSheep(sheep);
+                                spawned = true;
+                                break;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
