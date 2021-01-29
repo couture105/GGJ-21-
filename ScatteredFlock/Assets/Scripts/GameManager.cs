@@ -45,4 +45,7 @@ public class GameManager : MonoBehaviour
         }
         GameObject.DontDestroyOnLoad(parentTransform.gameObject);
     }
+
+    public HUD hud;
+    public Level level;
 }
