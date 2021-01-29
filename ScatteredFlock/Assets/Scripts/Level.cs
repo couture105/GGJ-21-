@@ -9,6 +9,7 @@ public class Level : MonoBehaviour
 
     public int maxSheeps = 128;
     public int maxWolfs = 8;
+    public int maxRams = 8;
     public float shepherdSpawnRadius = 10.0f;
 
     public GameObject deathEffectPrefab;
@@ -16,16 +17,19 @@ public class Level : MonoBehaviour
     public Transform effectsParent;
     public Transform sheepsParent;
     public Transform wolfsParent;
+    public Transform ramsParent;
     public Transform shepherdParent;
     public Camera mainCamera;
     public float cameraSpeed = 5.0f;
 
     public List<Sheep> sheeps;
     public List<Wolf> wolfs;
+    public List<Ram> rams;
     public Shepherd shepherd;
 
     public List<SheepSpawner> sheepSpawners;
     public List<WolfSpawner> wolfSpawners;
+    public List<RamSpawner> ramSpawners;
     public ShepherdSpawner shepherdSpawner;
 
     public List<Pen> pens;
@@ -60,6 +64,10 @@ public class Level : MonoBehaviour
         foreach (Wolf wolf in wolfs)
         {
             wolf.DeltaUpdate(Time.deltaTime);
+        }
+        foreach (Ram ram in rams)
+        {
+            ram.DeltaUpdate(Time.deltaTime);
         }
 
         if (pens != null)
@@ -102,6 +110,7 @@ public class Level : MonoBehaviour
                 spawner.SpwanSheeps();
             }
         }
+
         if (wolfs != null)
         {
             foreach (Wolf wolf in wolfs)
@@ -128,6 +137,35 @@ public class Level : MonoBehaviour
                 spawner.level = this;
                 maxWolfs += spawner.maxWolfs;
                 spawner.SpawnWolfs();
+            }
+        }
+
+        if (rams != null)
+        {
+            foreach (Ram ram in rams)
+            {
+                GameObject.Destroy(ram.gameObject);
+            }
+
+            rams.Clear();
+            rams = null;
+        }
+        rams = new List<Ram>();
+        maxRams= 0;
+
+        if (ramSpawners != null)
+        {
+            ramSpawners.Clear();
+            ramSpawners = null;
+        }
+        ramSpawners = FindObjectsOfType<RamSpawner>().ToList();
+        if (ramSpawners != null)
+        {
+            foreach (RamSpawner spawner in ramSpawners)
+            {
+                spawner.level = this;
+                maxRams += spawner.maxRams;
+                spawner.SpawnRams();
             }
         }
 
@@ -222,6 +260,12 @@ public class Level : MonoBehaviour
     {
         wolf.level = this;
         wolfs.Add(wolf);
+    }
+
+    public void AddRam(Ram ram)
+    {
+        ram.level = this;
+        rams.Add(ram);
     }
 
     public void AddSheep(Sheep sheep)

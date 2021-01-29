@@ -166,6 +166,23 @@ public class Sheep : GameEntity
             }
         }
 
+        for (int i = 0; i < level.rams.Count; i++)
+        {
+            Ram ram = level.rams[i];
+            if (ram.active == false)
+            {
+                continue;
+            }
+            float distance = Vector3.Distance(transform.position, ram.transform.position);
+            if (distance <= ram.avoidRadius)
+            {
+                Vector3 diff = this.transform.position - ram.transform.position;
+                diff.Normalize();
+                diff = diff / distance;
+                avoidDirection += diff;
+            }
+        }
+
         Shepherd shepherd = level.shepherd;
         if (shepherd.active)
         {
@@ -254,6 +271,23 @@ public class Sheep : GameEntity
             if (distance <= wolf.influenceRadius)
             {
                 Vector3 diff = this.transform.position - wolf.transform.position;
+                diff.Normalize();
+                diff = diff / distance;
+                externalDirection += diff;
+            }
+        }
+
+        for (int i = 0; i < level.rams.Count; i++)
+        {
+            Ram ram = level.rams[i];
+            if (ram.active == false)
+            {
+                continue;
+            }
+            float distance = Vector3.Distance(transform.position, ram.transform.position);
+            if (distance <= ram.influenceRadius)
+            {
+                Vector3 diff = ram.transform.position - this.transform.position;
                 diff.Normalize();
                 diff = diff / distance;
                 externalDirection += diff;

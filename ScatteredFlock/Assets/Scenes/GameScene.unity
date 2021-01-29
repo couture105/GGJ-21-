@@ -154,8 +154,72 @@ Transform:
   - {fileID: 1240375759}
   - {fileID: 1128318091}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &65647366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 65647367}
+  - component: {fileID: 65647369}
+  - component: {fileID: 65647368}
+  m_Layer: 0
+  m_Name: spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &65647367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65647366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.44, y: -20.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1131822108}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &65647368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65647366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0da40b86ca0dc4098033e37e1c5ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 4
+  ramPrefab: {fileID: 4260544074665672372, guid: bd76ae723b30e0c48a36e2157945a984, type: 3}
+  maxRams: 2
+  level: {fileID: 0}
+--- !u!114 &65647369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65647366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19315c21797d0142a72dfad9315df79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 4
+  wolfPrefab: {fileID: 7910362359955750992, guid: 87de8c20dfe3e334581dadd5354073ee, type: 3}
+  maxWolfs: 2
+  level: {fileID: 0}
 --- !u!1 &91053890
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91053890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1, y: -17, z: 0}
+  m_LocalPosition: {x: 18.58, y: 0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 646944743}
@@ -200,8 +264,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 4
-  wolfPrefab: {fileID: 5587167204917996894, guid: 975bfd9ba7106074dbd4e9e74a58458f, type: 3}
-  maxWolfs: 4
+  wolfPrefab: {fileID: 7910362359955750992, guid: 87de8c20dfe3e334581dadd5354073ee, type: 3}
+  maxWolfs: 2
+  level: {fileID: 0}
+--- !u!1 &201816254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201816255}
+  - component: {fileID: 201816257}
+  - component: {fileID: 201816256}
+  m_Layer: 0
+  m_Name: spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &201816255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201816254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.93, y: -20.13, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1131822108}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &201816256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201816254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0da40b86ca0dc4098033e37e1c5ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 4
+  ramPrefab: {fileID: 4260544074665672372, guid: bd76ae723b30e0c48a36e2157945a984, type: 3}
+  maxRams: 2
+  level: {fileID: 0}
+--- !u!114 &201816257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201816254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19315c21797d0142a72dfad9315df79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 4
+  wolfPrefab: {fileID: 7910362359955750992, guid: 87de8c20dfe3e334581dadd5354073ee, type: 3}
+  maxWolfs: 2
   level: {fileID: 0}
 --- !u!1 &258984170
 GameObject:
@@ -249,6 +377,8 @@ MonoBehaviour:
   spawnRadius: 8
   sheepPrefab: {fileID: 1622011704093287643, guid: 2a2144a5d0114574193ef8075cb3a77e, type: 3}
   maxSheeps: 8
+  respawns: 1
+  sheepType: 0
   level: {fileID: 0}
 --- !u!1 &301831938
 GameObject:
@@ -296,6 +426,8 @@ MonoBehaviour:
   spawnRadius: 8
   sheepPrefab: {fileID: 5816120721424590903, guid: 2e56b951584cbfd44a1774306d8b6de0, type: 3}
   maxSheeps: 8
+  respawns: 1
+  sheepType: 0
   level: {fileID: 0}
 --- !u!1 &359900877
 GameObject:
@@ -431,7 +563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508477907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 16.8, z: 0}
+  m_LocalPosition: {x: -20.95, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 646944743}
@@ -450,8 +582,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 4
-  wolfPrefab: {fileID: 5587167204917996894, guid: 975bfd9ba7106074dbd4e9e74a58458f, type: 3}
-  maxWolfs: 4
+  wolfPrefab: {fileID: 7910362359955750992, guid: 87de8c20dfe3e334581dadd5354073ee, type: 3}
+  maxWolfs: 2
   level: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
@@ -582,6 +714,8 @@ MonoBehaviour:
   spawnRadius: 8
   sheepPrefab: {fileID: 1622011704093287643, guid: 2a2144a5d0114574193ef8075cb3a77e, type: 3}
   maxSheeps: 8
+  respawns: 1
+  sheepType: 0
   level: {fileID: 0}
 --- !u!1 &539300181
 GameObject:
@@ -1009,6 +1143,8 @@ MonoBehaviour:
   spawnRadius: 8
   sheepPrefab: {fileID: 7394670953582455623, guid: b78b1df72a87224449e309ea54e5bc37, type: 3}
   maxSheeps: 8
+  respawns: 1
+  sheepType: 0
   level: {fileID: 0}
 --- !u!1 &623356157
 GameObject:
@@ -1151,7 +1287,7 @@ Transform:
   - {fileID: 91053891}
   - {fileID: 733607631}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &733607630
 GameObject:
@@ -1198,7 +1334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRadius: 4
   wolfPrefab: {fileID: 5587167204917996894, guid: 975bfd9ba7106074dbd4e9e74a58458f, type: 3}
-  maxWolfs: 4
+  maxWolfs: 2
   level: {fileID: 0}
 --- !u!1 &853714872
 GameObject:
@@ -1421,6 +1557,8 @@ MonoBehaviour:
   spawnRadius: 8
   sheepPrefab: {fileID: 7394670953582455623, guid: b78b1df72a87224449e309ea54e5bc37, type: 3}
   maxSheeps: 8
+  respawns: 1
+  sheepType: 0
   level: {fileID: 0}
 --- !u!1 &990398227
 GameObject:
@@ -1450,7 +1588,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1008582763
 GameObject:
@@ -1497,7 +1635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRadius: 4
   wolfPrefab: {fileID: 5587167204917996894, guid: 975bfd9ba7106074dbd4e9e74a58458f, type: 3}
-  maxWolfs: 4
+  maxWolfs: 2
   level: {fileID: 0}
 --- !u!1 &1073487575
 GameObject:
@@ -1535,7 +1673,7 @@ Transform:
   - {fileID: 961944156}
   - {fileID: 258984171}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1074447677
 GameObject:
@@ -1583,7 +1721,39 @@ MonoBehaviour:
   spawnRadius: 8
   sheepPrefab: {fileID: 5816120721424590903, guid: 2e56b951584cbfd44a1774306d8b6de0, type: 3}
   maxSheeps: 8
+  respawns: 1
+  sheepType: 0
   level: {fileID: 0}
+--- !u!1 &1122869962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1122869963}
+  m_Layer: 0
+  m_Name: RamsParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1122869963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122869962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2090437763}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1125318107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,6 +1965,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1131822107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1131822108}
+  m_Layer: 0
+  m_Name: RamSpawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1131822108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131822107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 65647367}
+  - {fileID: 201816255}
+  - {fileID: 1403501804}
+  - {fileID: 1198448174}
+  m_Father: {fileID: 2090437763}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1195720682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +2045,72 @@ MonoBehaviour:
   spawnRadius: 8
   sheepPrefab: {fileID: 7394670953582455623, guid: b78b1df72a87224449e309ea54e5bc37, type: 3}
   maxSheeps: 8
+  respawns: 1
+  sheepType: 0
+  level: {fileID: 0}
+--- !u!1 &1198448173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1198448174}
+  - component: {fileID: 1198448176}
+  - component: {fileID: 1198448175}
+  m_Layer: 0
+  m_Name: spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1198448174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198448173}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.88, y: 18.82, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1131822108}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1198448175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198448173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0da40b86ca0dc4098033e37e1c5ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 4
+  ramPrefab: {fileID: 4260544074665672372, guid: bd76ae723b30e0c48a36e2157945a984, type: 3}
+  maxRams: 2
+  level: {fileID: 0}
+--- !u!114 &1198448176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198448173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19315c21797d0142a72dfad9315df79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 4
+  wolfPrefab: {fileID: 7910362359955750992, guid: 87de8c20dfe3e334581dadd5354073ee, type: 3}
+  maxWolfs: 2
   level: {fileID: 0}
 --- !u!1 &1240375758
 GameObject:
@@ -2148,6 +2418,70 @@ MonoBehaviour:
   spawnRadius: 1
   shepherdPrefab: {fileID: 7478727197903234795, guid: c405b3ef9a4aa16418527f27aeabb76e, type: 3}
   level: {fileID: 0}
+--- !u!1 &1403501803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403501804}
+  - component: {fileID: 1403501806}
+  - component: {fileID: 1403501805}
+  m_Layer: 0
+  m_Name: spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1403501804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403501803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.45, y: 18.57, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1131822108}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1403501805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403501803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0da40b86ca0dc4098033e37e1c5ee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 4
+  ramPrefab: {fileID: 4260544074665672372, guid: bd76ae723b30e0c48a36e2157945a984, type: 3}
+  maxRams: 2
+  level: {fileID: 0}
+--- !u!114 &1403501806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403501803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b19315c21797d0142a72dfad9315df79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRadius: 4
+  wolfPrefab: {fileID: 7910362359955750992, guid: 87de8c20dfe3e334581dadd5354073ee, type: 3}
+  maxWolfs: 2
+  level: {fileID: 0}
 --- !u!1 &1411600242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,7 +2549,7 @@ Transform:
   - {fileID: 1125318108}
   - {fileID: 1335267385}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1468956589
 GameObject:
@@ -2958,6 +3292,8 @@ MonoBehaviour:
   spawnRadius: 8
   sheepPrefab: {fileID: 1622011704093287643, guid: 2a2144a5d0114574193ef8075cb3a77e, type: 3}
   maxSheeps: 8
+  respawns: 1
+  sheepType: 0
   level: {fileID: 0}
 --- !u!1 &2090437761
 GameObject:
@@ -2990,19 +3326,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSheeps: 64
   maxWolfs: 16
+  maxRams: 8
   shepherdSpawnRadius: 8
   deathEffectPrefab: {fileID: 5754998630853951051, guid: 85f7a7d9f44438c43a7512636eed4b42, type: 3}
   effectsParent: {fileID: 990398228}
   sheepsParent: {fileID: 1468956590}
   wolfsParent: {fileID: 1411600243}
+  ramsParent: {fileID: 1122869963}
   shepherdParent: {fileID: 1344834032}
   mainCamera: {fileID: 519420031}
   cameraSpeed: 16
   sheeps: []
   wolfs: []
+  rams: []
   shepherd: {fileID: 0}
   sheepSpawners: []
   wolfSpawners: []
+  ramSpawners: []
   shepherdSpawner: {fileID: 0}
   pens: []
   activeSheeps: 0
@@ -3020,11 +3360,13 @@ Transform:
   - {fileID: 1344834032}
   - {fileID: 1468956590}
   - {fileID: 1411600243}
+  - {fileID: 1122869963}
   - {fileID: 3574365}
   - {fileID: 1416862031}
   - {fileID: 990398228}
   - {fileID: 1073487576}
   - {fileID: 646944743}
+  - {fileID: 1131822108}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
