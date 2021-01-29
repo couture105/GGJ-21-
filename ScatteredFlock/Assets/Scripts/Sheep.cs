@@ -15,6 +15,7 @@ public class Sheep : GameEntity
     public bool useAvoidDirection = true;
     public bool useExternalDirection = true;
     public bool useCohesion = true;
+    public bool useOneTypeFlock = true;
 
     public float scanRadius = 4.0f;
     public float cohesionAmount = 0.5f;
@@ -93,7 +94,7 @@ public class Sheep : GameEntity
         for (int i = 0; i < level.sheeps.Count; i++)
         {
             Sheep sheep = level.sheeps[i];
-            if (sheep == this || (sheep.active == false))
+            if (sheep == this || (sheep.active == false) || (useOneTypeFlock && (sheep.type != type)))
             {
                 continue;
             }
@@ -134,6 +135,17 @@ public class Sheep : GameEntity
                 diff.Normalize();
                 diff = diff / distance;
                 avoidDirection += diff;
+            }
+
+            if (useOneTypeFlock && (sheep.type != type))
+            {
+                if (distance <= scanRadius)
+                {
+                    Vector3 diff = this.transform.position - sheep.transform.position;
+                    diff.Normalize();
+                    diff = diff / distance;
+                    avoidDirection += diff;
+                }
             }
         }
 
@@ -182,7 +194,7 @@ public class Sheep : GameEntity
         for (int i = 0; i < level.sheeps.Count; i++)
         {
             Sheep sheep = level.sheeps[i];
-            if (sheep == this || (sheep.active == false))
+            if (sheep == this || (sheep.active == false) || (useOneTypeFlock && (sheep.type != type)))
             {
                 continue;
             }
