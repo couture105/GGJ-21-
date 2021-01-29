@@ -10,9 +10,10 @@ public class GameEntity : MonoBehaviour
     public float maxSpeed;
     public float acceleration = 3.0f;
     public float attenuation = -0.5f;
-    public float rotationSpeed;
+    public float rotationSpeed = 5.0f;
 
     public Vector3 currentHeading;
+    protected Vector2 visualHeading = Vector3.zero;
 
     public bool isAtracting = false;
     public bool isThreatening = false;
@@ -30,6 +31,13 @@ public class GameEntity : MonoBehaviour
     public float speed = 0;
     protected Vector3 lastPos = Vector3.zero;
     protected Vector3 avoidObjectDirection = Vector3.zero;
+
+    protected SpriteRenderer spriteRenderer;
+
+    public void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     public virtual void DeltaUpdate(float dt)
     {
@@ -90,10 +98,23 @@ public class GameEntity : MonoBehaviour
 
         moveDirection = (moveDirection + currentHeading).normalized;
 
-        transform.position = Vector2.MoveTowards(transform.position, transform.position + moveDirection, speed * dt);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDirection, speed * dt);
+        visualHeading = Vector3.MoveTowards(visualHeading, currentHeading, rotationSpeed * dt);
 
-        Quaternion rotation = Quaternion.LookRotation(Vector3.forward, moveDirection);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, rotationSpeed * dt);
+        if (visualHeading.x > 0)
+        {
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.flipX = false;
+            }
+        }
+        if (visualHeading.x < 0)
+        {
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.flipX = true;
+            }
+        }
     }
 
     protected virtual void CalculateHeading(float dt)

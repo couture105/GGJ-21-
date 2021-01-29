@@ -101,7 +101,7 @@ MonoBehaviour:
   maxSpeed: 6
   acceleration: 3
   attenuation: -3
-  rotationSpeed: 0
+  rotationSpeed: 5
   currentHeading: {x: 0, y: 0, z: 0}
   isAtracting: 0
   isThreatening: 0

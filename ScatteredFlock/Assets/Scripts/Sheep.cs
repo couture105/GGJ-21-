@@ -15,10 +15,8 @@ public class Sheep : GameEntity
     public float avergaeDirectionMultiplier = 5f;
     public float avoidDirectionMultiplier = 1f;
     public float externalDirectionMultiplier = 5f;
-    public float avoidPenMultiplier = 0.5f;
 
     public float maxWanderDistance = 256;
-    public float minWanderDistance = 16;
 
     protected override Vector3 MoveDirection(float dt)
     {
@@ -33,11 +31,6 @@ public class Sheep : GameEntity
         if ((level.pen.transform.position - transform.position).magnitude > maxWanderDistance)
         {
             moveDirection += (level.pen.transform.position - transform.position).normalized;
-        }
-
-        if ((level.pen.transform.position - transform.position).magnitude < minWanderDistance)
-        {
-            moveDirection += (transform.position - level.pen.transform.position).normalized * avoidPenMultiplier;
         }
 
         moveDirection += GetAvoidObjectsDirection(dt);

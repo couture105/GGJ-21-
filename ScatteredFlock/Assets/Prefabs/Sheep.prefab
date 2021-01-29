@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5799464462908714572}
   - component: {fileID: 2313751705765821437}
   - component: {fileID: 7414229646291664522}
+  - component: {fileID: 3772134626697320514}
   m_Layer: 0
   m_Name: Sheep
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2e507916847af1e43ae35b3e2e95e751, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08c36f05e5941cf47a374f0164a8d131, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,13 +106,13 @@ MonoBehaviour:
   isAtracting: 0
   isThreatening: 0
   influenceRadius: 2
-  avoidRadius: 1.5
+  avoidRadius: 1
   useAvoidObjects: 1
   avoidObjectDirectionFallOffSpeed: 20
   avoidObjectMultiplier: 255
   scanAngle: {x: 60, y: -60}
   avoidForceProximityMultiplier: 100
-  avoidObjectsScanDistance: 1.5
+  avoidObjectsScanDistance: 1
   currentAvoidForce: 0
   speed: 0
   useAverageDirection: 1
@@ -126,3 +127,22 @@ MonoBehaviour:
   avoidPenMultiplier: 0.25
   maxWanderDistance: 64
   minWanderDistance: 16
+--- !u!95 &3772134626697320514
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7394670953582455623}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3cb18f0bb01f67746952c566a4ad31fc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
