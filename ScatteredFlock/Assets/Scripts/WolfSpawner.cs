@@ -20,4 +20,9 @@ public class WolfSpawner : MonoBehaviour
             wolf.startPos = wolf.transform.position;
         }
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawIcon(transform.position, "Wolf.png", true);
+    }
 }

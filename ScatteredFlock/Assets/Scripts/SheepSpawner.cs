@@ -20,4 +20,9 @@ public class SheepSpawner : MonoBehaviour
             sheep.startPos = sheep.transform.position;
         }
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawIcon(transform.position, "Sheep.png", true);
+    }
 }

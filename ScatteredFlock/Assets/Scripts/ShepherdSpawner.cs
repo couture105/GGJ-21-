@@ -16,4 +16,9 @@ public class ShepherdSpawner : MonoBehaviour
         shepherd.transform.position = transform.position + new Vector3(Random.Range(-spawnRadius, spawnRadius), Random.Range(-spawnRadius, spawnRadius), 0);
         shepherd.startPos = shepherd.transform.position;
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawIcon(transform.position, "Shepherd.png", true);
+    }
 }
