@@ -7,8 +7,6 @@ public class Wolf : GameEntity
     public float attackCoolDown = 2.0f;
     public float attackRadius = 1.5f;
 
-    public Animator attackAnim;
-
     public float maxWanderDistance = 24;
     public float changeDirectionTime = 1.0f;
     public float externalDirectionMultiplier = 5f;
@@ -107,15 +105,9 @@ public class Wolf : GameEntity
                     float distance = Vector3.Distance(this.transform.position, sheep.transform.position);
                     if (distance < attackRadius)
                     {
+                        level.SpawnDeathEffect(sheep.transform.position, Quaternion.LookRotation(Vector3.forward, (sheep.transform.position - transform.position).normalized));
                         level.DestroySheep(sheep);
                         attackCooldownTimer = attackCoolDown;
-                        //enable attack effect
-                        if (attackAnim != null && attackAnim.gameObject.activeInHierarchy == false)
-                        {
-                            attackAnim.gameObject.SetActive(true);
-                            attackAnim.Play("wolfattack", 0);
-                            attackAnim.transform.rotation = Quaternion.LookRotation(Vector3.forward, (transform.position - sheep.transform.position).normalized);
-                        }
                     }
                 }
             }
@@ -125,14 +117,6 @@ public class Wolf : GameEntity
                 if (attackCooldownTimer <= 0)
                 {
                     attackCooldownTimer = 0;
-                }
-            }
-
-            if (attackAnim != null && attackAnim.gameObject.activeInHierarchy)
-            {
-                if (attackAnim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !attackAnim.IsInTransition(0))
-                {
-                    attackAnim.gameObject.SetActive(false);
                 }
             }
         }

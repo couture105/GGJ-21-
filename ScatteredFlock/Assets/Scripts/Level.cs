@@ -11,6 +11,9 @@ public class Level : MonoBehaviour
     public int maxWolfs = 8;
     public float shepherdSpawnRadius = 10.0f;
 
+    public GameObject deathEffectPrefab;
+
+    public Transform effectsParent;
     public Transform sheepsParent;
     public Transform wolfsParent;
     public Transform shepherdParent;
@@ -28,6 +31,8 @@ public class Level : MonoBehaviour
     public List<Pen> pens;
 
     public int activeSheeps = 0;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -201,5 +206,15 @@ public class Level : MonoBehaviour
     {
         sheep.active = false;
         activeSheeps--;
+    }
+
+    public void SpawnDeathEffect(Vector3 pos, Quaternion rot)
+    {
+        if (deathEffectPrefab != null && effectsParent != null)
+        {
+            GameObject effect = GameObject.Instantiate(deathEffectPrefab, effectsParent);
+            effect.transform.position = pos;
+            effect.transform.rotation = rot;
+        }
     }
 }

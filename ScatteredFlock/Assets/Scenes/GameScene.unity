@@ -1151,7 +1151,7 @@ Transform:
   - {fileID: 91053891}
   - {fileID: 733607631}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &733607630
 GameObject:
@@ -1422,6 +1422,36 @@ MonoBehaviour:
   sheepPrefab: {fileID: 7394670953582455623, guid: b78b1df72a87224449e309ea54e5bc37, type: 3}
   maxSheeps: 8
   level: {fileID: 0}
+--- !u!1 &990398227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 990398228}
+  m_Layer: 0
+  m_Name: EffectsParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &990398228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990398227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2090437763}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1008582763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,7 +1535,7 @@ Transform:
   - {fileID: 961944156}
   - {fileID: 258984171}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1074447677
 GameObject:
@@ -1914,6 +1944,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1338706528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338706530}
+  - component: {fileID: 1338706529}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1338706529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338706528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee506a4e1c1d4d44d9ab989261586043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1338706530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338706528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.66649, y: 18.958763, z: -6.4215674}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1344834031
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,6 +2906,8 @@ MonoBehaviour:
   maxSheeps: 64
   maxWolfs: 16
   shepherdSpawnRadius: 8
+  deathEffectPrefab: {fileID: 5754998630853951051, guid: 85f7a7d9f44438c43a7512636eed4b42, type: 3}
+  effectsParent: {fileID: 990398228}
   sheepsParent: {fileID: 1468956590}
   wolfsParent: {fileID: 1411600243}
   shepherdParent: {fileID: 1344834032}
@@ -2862,6 +2937,7 @@ Transform:
   - {fileID: 1411600243}
   - {fileID: 3574365}
   - {fileID: 1416862031}
+  - {fileID: 990398228}
   - {fileID: 1073487576}
   - {fileID: 646944743}
   m_Father: {fileID: 0}
