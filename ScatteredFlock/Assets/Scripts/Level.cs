@@ -7,18 +7,9 @@ public class Level : MonoBehaviour
 {
     bool _initialized = false;
 
-    public GameObject sheepPrefab;
-    public GameObject wolfPrefab;
-    public GameObject shepherdPrefab;
-
-    public GameObject pen;
-
     public int maxSheeps = 128;
     public int maxWolfs = 8;
-    public float penRadius = 2.0f;
     public float shepherdSpawnRadius = 10.0f;
-    public float sheepSpawnRadius = 24.0f;
-    public float wolfSpawnRadius = 32.0f;
 
     public Transform sheepsParent;
     public Transform wolfsParent;
@@ -32,11 +23,11 @@ public class Level : MonoBehaviour
 
     public List<SheepSpawner> sheepSpawners;
     public List<WolfSpawner> wolfSpawners;
-    int wolfSpawnerIndex = 0;
-    int sheepSpawnerIndex = 0;
+    public ShepherdSpawner shepherdSpawner;
+
+    public List<Pen> pens;
 
     public int activeSheeps = 0;
-    public int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -65,35 +56,18 @@ public class Level : MonoBehaviour
         {
             wolf.DeltaUpdate(Time.deltaTime);
         }
-        PenSheeps();
+
+        if (pens != null)
+        {
+            foreach (Pen pen in pens)
+            {
+                pen.DeltaUpdate(Time.deltaTime);
+            }
+        }
     }
 
     void Initialize()
     {
-        if (sheepSpawners != null)
-        {
-            sheepSpawners.Clear();
-            sheepSpawners = null;
-        }
-        sheepSpawners = FindObjectsOfType<SheepSpawner>().ToList();
-
-        if (wolfSpawners != null)
-        {
-            wolfSpawners.Clear();
-            wolfSpawners = null;
-        }
-        wolfSpawners = FindObjectsOfType<WolfSpawner>().ToList();
-
-        if (shepherd != null)
-        {
-            GameObject.Destroy(shepherd.gameObject);
-            shepherd = null;
-        }
-        shepherd = GameObject.Instantiate(shepherdPrefab, shepherdParent).GetComponent<Shepherd>();
-        shepherd.transform.position = new Vector3(Random.Range(-shepherdSpawnRadius, shepherdSpawnRadius), Random.Range(-shepherdSpawnRadius, shepherdSpawnRadius), 0);
-        shepherd.active = true;
-        shepherd.level = this;
-
         if (sheeps != null)
         {
             foreach (Sheep sheep in sheeps)
@@ -104,46 +78,83 @@ public class Level : MonoBehaviour
             sheeps.Clear();
             sheeps = null;
         }
-
         sheeps = new List<Sheep>();
-        for (int i = 0; i < maxSheeps; i++)
-        {
-            Sheep sheep = GameObject.Instantiate(sheepPrefab, sheepsParent).GetComponent<Sheep>();
-            sheep.active = false;
-            sheep.level = this;
-            sheeps.Add(sheep);
-        }
         activeSheeps = 0;
-        score = 0;
+        maxSheeps = 0;
 
-        wolfs = new List<Wolf>();
-        for (int i = 0; i < maxWolfs; i++)
+        if (sheepSpawners != null)
         {
-            Wolf wolf = GameObject.Instantiate(wolfPrefab, wolfsParent).GetComponent<Wolf>();
-            
-            wolf.active = true;
-            wolf.level = this;
-            wolfs.Add(wolf);
-
-            if (wolfSpawners != null && wolfSpawners.Count > 0)
-            {
-                WolfSpawner spawner = wolfSpawners[wolfSpawnerIndex];
-                wolf.transform.position = spawner.transform.position + 
-                    new Vector3(Random.Range(-spawner.spawnRadius, spawner.spawnRadius), Random.Range(-spawner.spawnRadius, spawner.spawnRadius), 0);
-                wolfSpawnerIndex++;
-                if (wolfSpawnerIndex >= wolfSpawners.Count)
-                {
-                    wolfSpawnerIndex = 0;
-                }
-            }
-            else
-            {
-                wolf.transform.position = new Vector3(Random.Range(-wolfSpawnRadius, wolfSpawnRadius), Random.Range(-wolfSpawnRadius, wolfSpawnRadius), 0);
-            }
-
-            wolf.startPos = wolf.transform.position;
+            sheepSpawners.Clear();
+            sheepSpawners = null;
         }
-        score = 0;
+        sheepSpawners = FindObjectsOfType<SheepSpawner>().ToList();
+        if (sheepSpawners != null)
+        {
+            foreach (SheepSpawner spawner in sheepSpawners)
+            {
+                spawner.level = this;
+                maxSheeps += spawner.maxSheeps;
+                spawner.SpwanSheeps();
+            }
+        }
+        if (wolfs != null)
+        {
+            foreach (Wolf wolf in wolfs)
+            {
+                GameObject.Destroy(wolf.gameObject);
+            }
+
+            wolfs.Clear();
+            wolfs = null;
+        }
+        wolfs = new List<Wolf>();
+        maxWolfs = 0;
+
+        if (wolfSpawners != null)
+        {
+            wolfSpawners.Clear();
+            wolfSpawners = null;
+        }
+        wolfSpawners = FindObjectsOfType<WolfSpawner>().ToList();
+        if (wolfSpawners != null)
+        {
+            foreach (WolfSpawner spawner in wolfSpawners)
+            {
+                spawner.level = this;
+                maxWolfs += spawner.maxWolfs;
+                spawner.SpawnWolfs();
+            }
+        }
+
+        if (pens != null)
+        {
+            pens.Clear();
+            pens = null;
+        }
+        pens = FindObjectsOfType<Pen>().ToList();
+        if (pens != null)
+        {
+            foreach (Pen pen in pens)
+            {
+                pen.level = this;
+            }
+        }
+
+        if (shepherd != null)
+        {
+            GameObject.Destroy(shepherd.gameObject);
+            shepherd = null;
+        }
+        if (shepherdSpawner != null)
+        {
+            shepherdSpawner = null;
+        }
+        shepherdSpawner = FindObjectOfType<ShepherdSpawner>();
+        if (shepherdSpawner != null)
+        {
+            shepherdSpawner.level = this;
+            shepherdSpawner.SpawnShepherd();
+        }   
 
         _initialized = true;
     }
@@ -160,43 +171,35 @@ public class Level : MonoBehaviour
             Sheep sheep = sheeps[i];
             if (!sheep.active)
             {
-                if (sheepSpawners != null && sheepSpawners.Count > 0)
-                {
-                    SheepSpawner spawner = sheepSpawners[sheepSpawnerIndex];
-                    sheep.transform.position = spawner.transform.position +
-                        new Vector3(Random.Range(-spawner.spawnRadius, spawner.spawnRadius), Random.Range(-spawner.spawnRadius, spawner.spawnRadius), 0);
-                    sheepSpawnerIndex++;
-                    if (sheepSpawnerIndex >= sheepSpawners.Count)
-                    {
-                        sheepSpawnerIndex = 0;
-                    }
-                }
-                else
-                {
-                    sheep.transform.position = new Vector3(Random.Range(-sheepSpawnRadius, sheepSpawnRadius),
-                        Random.Range(-sheepSpawnRadius, sheepSpawnRadius), 0);
-                }
-            
+                sheep.transform.position = sheep.startPos;
                 sheep.active = true;
                 activeSheeps++;
             }
         }
     }
 
-    void PenSheeps()
+    public void AddShepherd(Shepherd shep)
     {
-        for (int i = 0; i < maxSheeps; i++)
-        {
-            Sheep sheep = sheeps[i];
-            if (sheep.active)
-            {
-                if ((sheep.transform.position - pen.transform.position).magnitude < penRadius)
-                {
-                    sheep.active = false;
-                    activeSheeps--;
-                    score++;
-                }
-            }
-        }
+        shep.level = this;
+        shepherd = shep;
+    }
+
+    public void AddWolf(Wolf wolf)
+    {
+        wolf.level = this;
+        wolfs.Add(wolf);
+    }
+
+    public void AddSheep(Sheep sheep)
+    {
+        sheep.level = this;
+        activeSheeps++;
+        sheeps.Add(sheep);
+    }
+
+    public void DestroySheep(Sheep sheep)
+    {
+        sheep.active = false;
+        activeSheeps--;
     }
 }

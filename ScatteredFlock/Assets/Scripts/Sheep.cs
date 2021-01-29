@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Sheep : GameEntity
 {
+    public enum SheepType
+    {
+        Red,
+        Green,
+        Blue
+    }
+
     public bool useAverageDirection = true;
     public bool useAvoidDirection = true;
     public bool useExternalDirection = true;
@@ -17,6 +24,42 @@ public class Sheep : GameEntity
     public float externalDirectionMultiplier = 5f;
 
     public float maxWanderDistance = 256;
+    public SheepType type;
+
+    public override void Start()
+    {
+        base.Start();
+
+        switch (type)
+        {
+            case SheepType.Red:
+            {
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.color = Color.red;
+                }
+                break;
+            }
+
+            case SheepType.Green:
+            {
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.color = Color.green;
+                }
+                break;
+            }
+
+            case SheepType.Blue:
+            {
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.color = Color.blue;
+                }
+                break;
+            }
+        }
+    }
 
     protected override Vector3 MoveDirection(float dt)
     {
@@ -26,11 +69,12 @@ public class Sheep : GameEntity
         moveDirection += GetAvoidDirection() * avoidDirectionMultiplier;
         moveDirection += GetCohesionDirection(cohesionAmount);
 
-        moveDirection += GetExternalDirection() * externalDirectionMultiplier;
+        Vector3 externalDirection = GetExternalDirection();
+        moveDirection += externalDirection * externalDirectionMultiplier;
 
-        if ((level.pen.transform.position - transform.position).magnitude > maxWanderDistance)
+        if ((externalDirection == Vector3.zero) && ((startPos - transform.position).magnitude > maxWanderDistance))
         {
-            moveDirection += (level.pen.transform.position - transform.position).normalized;
+            moveDirection += (startPos - transform.position).normalized;
         }
 
         moveDirection += GetAvoidObjectsDirection(dt);

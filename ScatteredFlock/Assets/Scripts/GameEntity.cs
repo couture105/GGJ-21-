@@ -12,6 +12,8 @@ public class GameEntity : MonoBehaviour
     public float attenuation = -0.5f;
     public float rotationSpeed = 5.0f;
 
+    public Vector3 startPos = Vector3.zero;
+
     public Vector3 currentHeading;
     protected Vector2 visualHeading = Vector3.zero;
 
@@ -34,7 +36,7 @@ public class GameEntity : MonoBehaviour
 
     protected SpriteRenderer spriteRenderer;
 
-    public void Start()
+    public virtual void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
