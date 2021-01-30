@@ -120,7 +120,7 @@ MonoBehaviour:
   useAttack: 1
   attackCoolDown: 2
   attackRadius: 1.5
-  maxWanderDistance: 4
+  maxWanderDistance: 2
   changeDirectionTime: 1
   externalDirectionMultiplier: 5
 --- !u!95 &2442820046318135389

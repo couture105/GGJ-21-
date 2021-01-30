@@ -136,6 +136,6 @@ MonoBehaviour:
   currentAvoidForce: 0
   speed: 0
   useExternalDirection: 1
-  maxWanderDistance: 8
+  maxWanderDistance: 64
   changeDirectionTime: 2
   externalDirectionMultiplier: 5

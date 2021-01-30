@@ -101,12 +101,13 @@ MonoBehaviour:
   maxSpeed: 6
   acceleration: 3
   attenuation: -3
-  rotationSpeed: 5
+  rotationSpeed: 10
+  startPos: {x: 0, y: 0, z: 0}
   currentHeading: {x: 0, y: 0, z: 0}
   isAtracting: 0
   isThreatening: 0
   influenceRadius: 8
-  avoidRadius: 2
+  avoidRadius: 4
   useAvoidObjects: 1
   avoidObjectDirectionFallOffSpeed: 20
   avoidObjectMultiplier: 255
