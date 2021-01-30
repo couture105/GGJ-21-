@@ -15,7 +15,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        if (SceneManager.GetActiveScene().name == "SplashScene")
+        {
+            soundManager.PlayStartMusic();
+        }
     }
 
     void Update()
@@ -61,6 +64,7 @@ public class GameManager : MonoBehaviour
 
     public HUD hud;
     public Level level;
+    public SoundManager soundManager;
     public GameStates state = GameStates.Splash;
 
     public void SetState(GameStates newState)
@@ -70,24 +74,31 @@ public class GameManager : MonoBehaviour
             case GameStates.Splash:
             {
                 SceneManager.LoadScene("SplashScene");
+                soundManager.StopAll();
+                soundManager.PlayStartMusic();
                 break;
             }
 
             case GameStates.Menu:
             {
                 SceneManager.LoadScene("MenuScene");
+                soundManager.PlayStartMusic();
                 break;
             }
 
             case GameStates.Game:
             {
                 SceneManager.LoadScene("GameScene");
+                soundManager.StopAll();
+                soundManager.PlayAmbientMusic();
                 break;
             }
 
             case GameStates.PostGame:
             {
                 SceneManager.LoadScene("PostGameScene");
+                soundManager.StopAll();
+                soundManager.PlayEndMusic();
                 break;
             }
         }

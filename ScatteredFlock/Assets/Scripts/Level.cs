@@ -291,6 +291,8 @@ public class Level : MonoBehaviour
             GameObject effect = GameObject.Instantiate(hitEffectPrefab, effectsParent);
             effect.transform.position = pos;
             effect.transform.rotation = rot;
+
+            GameManager.Instance.soundManager.PlayHitEffect();
         }
     }
 
@@ -301,6 +303,8 @@ public class Level : MonoBehaviour
             GameObject effect = GameObject.Instantiate(enterEffectPrefab, effectsParent);
             effect.transform.position = pos;
             effect.transform.rotation = rot;
+
+            GameManager.Instance.soundManager.PlayEnterEffect();
         }
     }
 

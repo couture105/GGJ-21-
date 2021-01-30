@@ -73,6 +73,7 @@ public class Shepherd : GameEntity
             {
                 animator.SetBool("Atract", true);
             }
+            GameManager.Instance.soundManager.PlayAttractSound();
         }
         else
         {
@@ -80,6 +81,7 @@ public class Shepherd : GameEntity
             {
                 animator.SetBool("Atract", false);
             }
+            GameManager.Instance.soundManager.StopAttractSound();
         }
 
         if (isThreatening)
@@ -88,6 +90,7 @@ public class Shepherd : GameEntity
             {
                 animator.SetBool("Scare", true);
             }
+            GameManager.Instance.soundManager.PlayScareSound();
         }
         else
         {
@@ -95,6 +98,7 @@ public class Shepherd : GameEntity
             {
                 animator.SetBool("Scare", false);
             }
+            GameManager.Instance.soundManager.StopScareSound();
         }
     }
 }
