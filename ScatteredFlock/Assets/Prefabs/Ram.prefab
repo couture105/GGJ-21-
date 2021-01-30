@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   active: 0
-  maxSpeed: 4
+  maxSpeed: 3
   acceleration: 3
   attenuation: -3
   rotationSpeed: 3
