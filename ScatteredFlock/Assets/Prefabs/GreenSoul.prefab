@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   active: 0
-  maxSpeed: 4
+  maxSpeed: 3
   acceleration: 2
   attenuation: -2
   rotationSpeed: 3
@@ -127,7 +127,7 @@ MonoBehaviour:
   avergaeDirectionMultiplier: 3
   avoidDirectionMultiplier: 10
   externalDirectionMultiplier: 5
-  maxWanderDistance: 64
+  maxWanderDistance: 32
   type: 1
   respawns: 1
 --- !u!95 &5361124717789013771
