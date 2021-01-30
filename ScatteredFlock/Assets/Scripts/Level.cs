@@ -22,6 +22,7 @@ public class Level : MonoBehaviour
     public Transform shepherdParent;
     public Camera mainCamera;
     public float cameraSpeed = 5.0f;
+    public Vector2 cameraSmoothSpeed = new Vector2(5, 5);
 
     public List<Sheep> sheeps;
     public List<Wolf> wolfs;
@@ -52,8 +53,7 @@ public class Level : MonoBehaviour
         {
             Initialize();
         }
-
-        Vector2 cameraPosition = Vector2.MoveTowards(mainCamera.transform.position, shepherd.transform.position, cameraSpeed * Time.deltaTime);
+        Vector2 cameraPosition = Vector2.SmoothDamp(mainCamera.transform.position, shepherd.transform.position, ref cameraSmoothSpeed, 0.15f);
         mainCamera.transform.position = new Vector3(cameraPosition.x, cameraPosition.y, mainCamera.transform.position.z);
 
         SpwanSheeps();
