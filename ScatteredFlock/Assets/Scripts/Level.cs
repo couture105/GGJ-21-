@@ -78,6 +78,8 @@ public class Level : MonoBehaviour
                 pen.DeltaUpdate(Time.deltaTime);
             }
         }
+
+        CheckWinCondition();
     }
 
     void Initialize()
@@ -299,6 +301,31 @@ public class Level : MonoBehaviour
             GameObject effect = GameObject.Instantiate(enterEffectPrefab, effectsParent);
             effect.transform.position = pos;
             effect.transform.rotation = rot;
+        }
+    }
+
+    void CheckWinCondition()
+    {
+        bool win = true;
+        if (pens != null && pens.Count > 0)
+        {
+            foreach (Pen pen in pens)
+            {
+                if (pen.currentScore < pen.winScore)
+                {
+                    win = false;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            win = false;
+        }
+
+        if (win)
+        {
+            GameManager.Instance.SetState(GameManager.GameStates.PostGame);
         }
     }
 }

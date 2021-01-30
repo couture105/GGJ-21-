@@ -1,9 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public enum GameStates
+    {
+        Splash = 0,
+        Menu = 1,
+        Game = 2,
+        PostGame = 3
+    }
+
     void Start()
     {
         
@@ -22,8 +31,12 @@ public class GameManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
+            DontDestroyChildOnLoad(_instance.gameObject);
         }
-        DontDestroyChildOnLoad(_instance.gameObject);
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     /// <summary>
@@ -48,4 +61,37 @@ public class GameManager : MonoBehaviour
 
     public HUD hud;
     public Level level;
+    public GameStates state = GameStates.Splash;
+
+    public void SetState(GameStates newState)
+    {
+        switch (newState)
+        {
+            case GameStates.Splash:
+            {
+                SceneManager.LoadScene("SplashScene");
+                break;
+            }
+
+            case GameStates.Menu:
+            {
+                SceneManager.LoadScene("MenuScene");
+                break;
+            }
+
+            case GameStates.Game:
+            {
+                SceneManager.LoadScene("GameScene");
+                break;
+            }
+
+            case GameStates.PostGame:
+            {
+                SceneManager.LoadScene("PostGameScene");
+                break;
+            }
+        }
+
+        state = newState;
+    }
 }
