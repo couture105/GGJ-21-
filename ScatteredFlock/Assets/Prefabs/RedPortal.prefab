@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5308655311035072149}
   - component: {fileID: 5308655311035072151}
   - component: {fileID: 5308655311035072148}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,8 @@ GameObject:
   - component: {fileID: 5308655312475342027}
   - component: {fileID: 5308655312475342026}
   - component: {fileID: 5308655312475342021}
-  m_Layer: 0
+  - component: {fileID: 138550196859462083}
+  m_Layer: 7
   m_Name: RedPortal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +195,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5308655312475342024}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.1899999, y: 3.9699998, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
@@ -266,8 +267,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceptedSheepType: 0
-  penRadius: 4
+  penRadius: 1
   level: {fileID: 0}
   winScore: 10
   currentScore: 0
   scoreText: {fileID: 5308655311035072148}
+--- !u!58 &138550196859462083
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5308655312475342024}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.5

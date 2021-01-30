@@ -124,9 +124,11 @@ MonoBehaviour:
   useOneTypeFlock: 1
   scanRadius: 4
   cohesionAmount: 0.3
+  penRadius: 4
   avergaeDirectionMultiplier: 3
   avoidDirectionMultiplier: 10
   externalDirectionMultiplier: 5
+  penDirectionMultiplier: 5
   maxWanderDistance: 32
   type: 0
   respawns: 1

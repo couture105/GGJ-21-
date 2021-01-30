@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8754799101147883872}
   - component: {fileID: 8754799101147883902}
   - component: {fileID: 8754799101147883903}
-  m_Layer: 0
+  - component: {fileID: 3455391979146664526}
+  m_Layer: 8
   m_Name: GreenPortal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8754799101147883873}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.42, y: -1.35, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
@@ -97,11 +98,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceptedSheepType: 1
-  penRadius: 4
+  penRadius: 1
   level: {fileID: 0}
   winScore: 10
   currentScore: 0
   scoreText: {fileID: 8754799101295406893}
+--- !u!58 &3455391979146664526
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754799101147883873}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.5
 --- !u!1 &8754799101295406895
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,7 +130,7 @@ GameObject:
   - component: {fileID: 8754799101295406894}
   - component: {fileID: 8754799101295406892}
   - component: {fileID: 8754799101295406893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: score
   m_TagString: Untagged
   m_Icon: {fileID: 0}

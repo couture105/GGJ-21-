@@ -19,10 +19,12 @@ public class Sheep : GameEntity
 
     public float scanRadius = 4.0f;
     public float cohesionAmount = 0.5f;
+    public float penRadius = 4.0f;
 
     public float avergaeDirectionMultiplier = 5f;
     public float avoidDirectionMultiplier = 1f;
     public float externalDirectionMultiplier = 5f;
+    public float penDirectionMultiplier = 5f;
 
     public float maxWanderDistance = 256;
     public SheepType type;
@@ -295,6 +297,50 @@ public class Sheep : GameEntity
             }
         }
 
+        for (int i = 0; i < level.pens.Count; i++)
+        {
+            Pen pen = level.pens[i];
+            if (pen.acceptedSheepType != type)
+            {
+                continue;
+            }
+
+            float distance = Vector3.Distance(transform.position, pen.transform.position);
+            if (distance <= penRadius)
+            {
+                Vector3 diff = pen.transform.position - this.transform.position;
+                diff.Normalize();
+                diff = diff / distance;
+                externalDirection += diff * penDirectionMultiplier;
+            }
+        }
+
+
         return externalDirection;
+    }
+
+    protected override void SetLayerMask()
+    {
+        base.SetLayerMask();
+        switch (type)
+        {
+            case SheepType.Red:
+            {
+                collsionMask ^= LayerMask.GetMask("RedPortal");
+                break;
+            }
+
+            case SheepType.Green:
+            {
+                collsionMask ^= LayerMask.GetMask("GreenPortal");
+                break;
+            }
+
+            case SheepType.Blue:
+            {
+                collsionMask ^= LayerMask.GetMask("BluePortal");
+                break;
+            }
+        }
     }
 }
