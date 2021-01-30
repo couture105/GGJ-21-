@@ -248,6 +248,10 @@ public class Level : MonoBehaviour
                             }
                         }
                     }
+                    if (spawned)
+                    {
+                        activeSheeps++;
+                    }
                 }
             }
         }
