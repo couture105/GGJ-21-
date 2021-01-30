@@ -102,7 +102,15 @@ public class GameEntity : MonoBehaviour
 
         moveDirection = (moveDirection + currentHeading).normalized;
 
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDirection, speed * dt);
+        RaycastHit2D raycastHit2DResult = Physics2D.Raycast(this.transform.position, moveDirection, speed * dt, collsionMask);
+        if (raycastHit2DResult.collider == null)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDirection, speed * dt);
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, transform.position - moveDirection, speed * dt);
+        }
         visualHeading = Vector3.MoveTowards(visualHeading, currentHeading, rotationSpeed * dt);
 
         if (visualHeading.x > 0)
@@ -177,19 +185,19 @@ public class GameEntity : MonoBehaviour
             {
                 currentRayDir = currentHeading * (avoidObjectsScanDistance + 0.5f);
                 raycastHit2DResult = Physics2D.Raycast(this.transform.position, currentRayDir, avoidObjectsScanDistance + 0.5f, collsionMask);
-                //Debug.DrawRay(this.transform.position, currentRayDir, Color.blue, 0.1f);
+                //Debug.DrawRay(transform.position, currentRayDir, Color.blue, 0.1f);
             }
             else if (t == 1)
             {
                 currentRayDir = dirOne;
                 raycastHit2DResult = Physics2D.Raycast(this.transform.position, dirOne, avoidObjectsScanDistance, collsionMask);
-                //Debug.DrawRay(this.transform.position, currentRayDir, Color.red, 0.1f);
+                //Debug.DrawRay(transform.position, currentRayDir, Color.red, 0.1f);
             }
             else
             {
                 currentRayDir = dirTwo;
                 raycastHit2DResult = Physics2D.Raycast(this.transform.position, dirTwo, avoidObjectsScanDistance, collsionMask);
-                //Debug.DrawRay(this.transform.position, currentRayDir, Color.green, 0.1f);
+                //Debug.DrawRay(transform.position, currentRayDir, Color.green, 0.1f);
             }
             if (raycastHit2DResult.collider != null)
             {
