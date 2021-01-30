@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7414229646291664522}
   - component: {fileID: 3772134626697320514}
   m_Layer: 0
-  m_Name: Sheep
+  m_Name: RedSheep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,10 +98,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: {fileID: 0}
   active: 0
-  maxSpeed: 4
+  maxSpeed: 3
   acceleration: 2
   attenuation: -2
   rotationSpeed: 3
+  startPos: {x: 0, y: 0, z: 0}
   currentHeading: {x: 0, y: 0, z: 0}
   isAtracting: 0
   isThreatening: 0
@@ -119,14 +120,15 @@ MonoBehaviour:
   useAvoidDirection: 1
   useExternalDirection: 1
   useCohesion: 1
+  useOneTypeFlock: 1
   scanRadius: 4
   cohesionAmount: 0.3
   avergaeDirectionMultiplier: 3
   avoidDirectionMultiplier: 10
   externalDirectionMultiplier: 5
-  avoidPenMultiplier: 0.25
-  maxWanderDistance: 64
-  minWanderDistance: 16
+  maxWanderDistance: 32
+  type: 0
+  respawns: 1
 --- !u!95 &3772134626697320514
 Animator:
   serializedVersion: 3
