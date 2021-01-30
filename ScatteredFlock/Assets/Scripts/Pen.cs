@@ -21,6 +21,7 @@ public class Pen : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
+        /*
         switch (acceptedSheepType)
         {
             case SheepType.Red:
@@ -50,6 +51,7 @@ public class Pen : MonoBehaviour
                 break;
             }
         }
+        */
     }
 
     public void DeltaUpdate(float dt)
@@ -61,6 +63,7 @@ public class Pen : MonoBehaviour
             {
                 if ((sheep.transform.position - transform.position).magnitude < penRadius)
                 {
+                    level.SpawnEnterEffect(sheep.transform.position, Quaternion.identity);
                     level.DestroySheep(sheep);
                     currentScore++;
                 }

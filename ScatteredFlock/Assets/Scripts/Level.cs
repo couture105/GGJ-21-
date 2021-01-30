@@ -12,7 +12,8 @@ public class Level : MonoBehaviour
     public int maxRams = 8;
     public float shepherdSpawnRadius = 10.0f;
 
-    public GameObject deathEffectPrefab;
+    public GameObject hitEffectPrefab;
+    public GameObject enterEffectPrefab;
 
     public Transform effectsParent;
     public Transform sheepsParent;
@@ -281,11 +282,21 @@ public class Level : MonoBehaviour
         activeSheeps--;
     }
 
-    public void SpawnDeathEffect(Vector3 pos, Quaternion rot)
+    public void SpawnHitEffect(Vector3 pos, Quaternion rot)
     {
-        if (deathEffectPrefab != null && effectsParent != null)
+        if (hitEffectPrefab != null && effectsParent != null)
         {
-            GameObject effect = GameObject.Instantiate(deathEffectPrefab, effectsParent);
+            GameObject effect = GameObject.Instantiate(hitEffectPrefab, effectsParent);
+            effect.transform.position = pos;
+            effect.transform.rotation = rot;
+        }
+    }
+
+    public void SpawnEnterEffect(Vector3 pos, Quaternion rot)
+    {
+        if (enterEffectPrefab != null && effectsParent != null)
+        {
+            GameObject effect = GameObject.Instantiate(enterEffectPrefab, effectsParent);
             effect.transform.position = pos;
             effect.transform.rotation = rot;
         }

@@ -105,7 +105,7 @@ public class Wolf : GameEntity
                     float distance = Vector3.Distance(this.transform.position, sheep.transform.position);
                     if (distance < attackRadius)
                     {
-                        level.SpawnDeathEffect(sheep.transform.position, Quaternion.LookRotation(Vector3.forward, (sheep.transform.position - transform.position).normalized));
+                        level.SpawnHitEffect(sheep.transform.position, Quaternion.identity);
                         level.DestroySheep(sheep);
                         attackCooldownTimer = attackCoolDown;
                     }

@@ -31,7 +31,7 @@ public class Sheep : GameEntity
     public override void Start()
     {
         base.Start();
-
+        /*
         switch (type)
         {
             case SheepType.Red:
@@ -61,6 +61,7 @@ public class Sheep : GameEntity
                 break;
             }
         }
+        */
     }
 
     protected override Vector3 MoveDirection(float dt)
