@@ -5,26 +5,39 @@ using UnityEngine;
 public class Shepherd : GameEntity
 {
     public float moveRadius = 16.0f;
+
+    protected Animator animator;
+
+    public override void Start()
+    {
+        base.Start();
+        animator = GetComponent<Animator>();
+    }
     public override void DeltaUpdate(float dt)
     {
         base.DeltaUpdate(dt);
-        if (Input.GetMouseButton(0))
+        if (active)
         {
-            isAtracting = true;
-        }
-        else
-        {
-            isAtracting = false;
+            if (Input.GetMouseButton(0))
+            {
+                isAtracting = true;
+            }
+            else
+            {
+                isAtracting = false;
+            }
+
+            if (Input.GetMouseButton(1))
+            {
+                isThreatening = true;
+            }
+            else
+            {
+                isThreatening = false;
+            }
         }
 
-        if (Input.GetMouseButton(1))
-        {
-            isThreatening = true;
-        }
-        else
-        {
-            isThreatening = false;
-        }
+        UpdateGestures();
     }
 
     protected override Vector3 MoveDirection(float dt)
@@ -50,5 +63,38 @@ public class Shepherd : GameEntity
         }
 
         return moveDirection.normalized;
+    }
+
+    protected void UpdateGestures()
+    {
+        if (isAtracting)
+        {
+            if (animator != null)
+            {
+                animator.SetBool("Atract", true);
+            }
+        }
+        else
+        {
+            if (animator != null)
+            {
+                animator.SetBool("Atract", false);
+            }
+        }
+
+        if (isThreatening)
+        {
+            if (animator != null)
+            {
+                animator.SetBool("Scare", true);
+            }
+        }
+        else
+        {
+            if (animator != null)
+            {
+                animator.SetBool("Scare", false);
+            }
+        }
     }
 }

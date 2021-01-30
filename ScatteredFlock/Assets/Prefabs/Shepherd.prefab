@@ -111,7 +111,7 @@ MonoBehaviour:
   useAvoidObjects: 1
   avoidObjectDirectionFallOffSpeed: 20
   avoidObjectMultiplier: 255
-  scanAngle: {x: 90, y: -90}
+  scanAngle: {x: 75, y: -75}
   avoidForceProximityMultiplier: 100
   avoidObjectsScanDistance: 1.5
   currentAvoidForce: 0
