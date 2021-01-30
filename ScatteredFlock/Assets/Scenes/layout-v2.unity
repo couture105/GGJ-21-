@@ -4276,7 +4276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 4
-  wolfPrefab: {fileID: 5587167204917996894, guid: 975bfd9ba7106074dbd4e9e74a58458f, type: 3}
+  wolfPrefab: {fileID: 5005712653478479130, guid: 6bbb17dd279c6cd4d8edb775d6098718, type: 3}
   maxWolfs: 4
   level: {fileID: 0}
 --- !u!1 &517406314
@@ -6482,7 +6482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 4
-  wolfPrefab: {fileID: 5587167204917996894, guid: 975bfd9ba7106074dbd4e9e74a58458f, type: 3}
+  wolfPrefab: {fileID: 5005712653478479130, guid: 6bbb17dd279c6cd4d8edb775d6098718, type: 3}
   maxWolfs: 4
   level: {fileID: 0}
 --- !u!1 &738781875
@@ -9024,7 +9024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 4
-  wolfPrefab: {fileID: 5587167204917996894, guid: 975bfd9ba7106074dbd4e9e74a58458f, type: 3}
+  wolfPrefab: {fileID: 5005712653478479130, guid: 6bbb17dd279c6cd4d8edb775d6098718, type: 3}
   maxWolfs: 4
   level: {fileID: 0}
 --- !u!1 &1013737474
@@ -10572,7 +10572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 4
-  wolfPrefab: {fileID: 5587167204917996894, guid: 975bfd9ba7106074dbd4e9e74a58458f, type: 3}
+  wolfPrefab: {fileID: 5005712653478479130, guid: 6bbb17dd279c6cd4d8edb775d6098718, type: 3}
   maxWolfs: 4
   level: {fileID: 0}
 --- !u!1 &1257654429
@@ -12567,7 +12567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 4
-  wolfPrefab: {fileID: 5587167204917996894, guid: 975bfd9ba7106074dbd4e9e74a58458f, type: 3}
+  wolfPrefab: {fileID: 5005712653478479130, guid: 6bbb17dd279c6cd4d8edb775d6098718, type: 3}
   maxWolfs: 4
   level: {fileID: 0}
 --- !u!1 &1435303214
@@ -18196,8 +18196,8 @@ MonoBehaviour:
   maxWolfs: 16
   maxRams: 8
   shepherdSpawnRadius: 8
-  hitEffectPrefab: {fileID: 0}
-  enterEffectPrefab: {fileID: 0}
+  hitEffectPrefab: {fileID: 1712752739580195142, guid: c48a1d439b86ca743aeca87a2df9ea32, type: 3}
+  enterEffectPrefab: {fileID: 6537805663096906217, guid: 5aeea8441ea7cc644b97c065007da7ee, type: 3}
   effectsParent: {fileID: 990398228}
   sheepsParent: {fileID: 0}
   wolfsParent: {fileID: 0}
