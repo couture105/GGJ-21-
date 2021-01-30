@@ -126,7 +126,7 @@ MonoBehaviour:
   penRadius: 4
   avergaeDirectionMultiplier: 3
   avoidDirectionMultiplier: 10
-  externalDirectionMultiplier: 5
+  externalDirectionMultiplier: 10
   penDirectionMultiplier: 5
   maxWanderDistance: 32
   type: 1

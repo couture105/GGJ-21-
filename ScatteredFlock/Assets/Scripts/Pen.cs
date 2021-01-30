@@ -61,7 +61,7 @@ public class Pen : MonoBehaviour
             Sheep sheep = level.sheeps[i];
             if (sheep.active && (sheep.type == acceptedSheepType))
             {
-                if ((sheep.transform.position - transform.position).magnitude < penRadius)
+                if (Vector2.Distance(transform.position, sheep.transform.position) < penRadius)
                 {
                     level.SpawnEnterEffect(sheep.transform.position, Quaternion.identity);
                     level.DestroySheep(sheep);

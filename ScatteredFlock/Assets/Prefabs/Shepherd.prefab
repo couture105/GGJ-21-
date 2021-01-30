@@ -200,6 +200,8 @@ MonoBehaviour:
   currentAvoidForce: 0
   speed: 0
   moveRadius: 2
+  walkSpeeed: 6
+  atractSpeed: 3.6
 --- !u!95 &3618023999013976316
 Animator:
   serializedVersion: 3

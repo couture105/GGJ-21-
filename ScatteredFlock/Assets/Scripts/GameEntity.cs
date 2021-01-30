@@ -127,6 +127,8 @@ public class GameEntity : MonoBehaviour
                 spriteRenderer.flipX = true;
             }
         }
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     protected virtual void CalculateHeading(float dt)

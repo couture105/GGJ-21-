@@ -5,8 +5,11 @@ using UnityEngine;
 public class Shepherd : GameEntity
 {
     public float moveRadius = 16.0f;
+    public float walkSpeeed = 6.0f;
+    public float atractSpeed = 3.0f;
 
     protected Animator animator;
+
 
     public override void Start()
     {
@@ -74,6 +77,7 @@ public class Shepherd : GameEntity
                 animator.SetBool("Atract", true);
             }
             GameManager.Instance.soundManager.PlayAttractSound();
+            maxSpeed = atractSpeed;
         }
         else
         {
@@ -82,6 +86,7 @@ public class Shepherd : GameEntity
                 animator.SetBool("Atract", false);
             }
             GameManager.Instance.soundManager.StopAttractSound();
+            maxSpeed = walkSpeeed;
         }
 
         if (isThreatening)

@@ -77,10 +77,12 @@ public class Sheep : GameEntity
         Vector3 externalDirection = GetExternalDirection();
         moveDirection += externalDirection * externalDirectionMultiplier;
 
+        /*
         if ((externalDirection == Vector3.zero) && ((startPos - transform.position).magnitude > maxWanderDistance))
         {
             moveDirection += (startPos - transform.position).normalized;
         }
+        */
 
         moveDirection += GetAvoidObjectsDirection(dt);
 
@@ -305,7 +307,7 @@ public class Sheep : GameEntity
                 continue;
             }
 
-            float distance = Vector3.Distance(transform.position, pen.transform.position);
+            float distance = Vector2.Distance(transform.position, pen.transform.position);
             if (distance <= penRadius)
             {
                 Vector3 diff = pen.transform.position - this.transform.position;
