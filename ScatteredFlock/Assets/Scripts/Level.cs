@@ -217,6 +217,7 @@ public class Level : MonoBehaviour
             Sheep sheep = sheeps[i];
             if (!sheep.active)
             {
+                /*
                 if (sheep.respawns)
                 {
                     sheep.transform.position = sheep.startPos;
@@ -224,6 +225,7 @@ public class Level : MonoBehaviour
                     activeSheeps++;
                 }
                 else
+                */
                 {
                     int startIndex = Random.Range(0, sheepSpawners.Count);
                     bool spawned = false;
