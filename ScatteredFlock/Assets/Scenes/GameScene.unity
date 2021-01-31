@@ -27616,6 +27616,7 @@ MonoBehaviour:
   shepherdSpawnRadius: 8
   hitEffectPrefab: {fileID: 1712752739580195142, guid: c48a1d439b86ca743aeca87a2df9ea32, type: 3}
   enterEffectPrefab: {fileID: 6537805663096906217, guid: 5aeea8441ea7cc644b97c065007da7ee, type: 3}
+  fireworkEffectPrefab: {fileID: 7718492718376186501, guid: f3799fae9ca3e0a4e93d516d37af03f7, type: 3}
   effectsParent: {fileID: 990398228}
   sheepsParent: {fileID: 0}
   wolfsParent: {fileID: 0}
@@ -27634,6 +27635,7 @@ MonoBehaviour:
   shepherdSpawner: {fileID: 0}
   pens: []
   activeSheeps: 0
+  finished: 0
 --- !u!4 &2090437763
 Transform:
   m_ObjectHideFlags: 0
