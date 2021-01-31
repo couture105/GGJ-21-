@@ -1164,6 +1164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 91618040}
   - component: {fileID: 91618039}
+  - component: {fileID: 91618041}
   m_Layer: 0
   m_Name: Torch1 (16)
   m_TagString: Untagged
@@ -1236,6 +1237,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 198
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &91618041
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91618038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &92541548
 GameObject:
   m_ObjectHideFlags: 0
@@ -4131,6 +4151,7 @@ GameObject:
   - component: {fileID: 418929420}
   - component: {fileID: 418929419}
   - component: {fileID: 418929421}
+  - component: {fileID: 418929422}
   m_Layer: 0
   m_Name: Fireplace1 (1)
   m_TagString: Untagged
@@ -4229,6 +4250,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6660595, y: 0.3115306}
   m_EdgeRadius: 0
+--- !u!95 &418929422
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418929418}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3df205124e26187469ac4c86e591126e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &423182397
 GameObject:
   m_ObjectHideFlags: 0
@@ -4541,6 +4581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442679302}
   - component: {fileID: 442679301}
+  - component: {fileID: 442679303}
   m_Layer: 0
   m_Name: Fireplace1 (2)
   m_TagString: Untagged
@@ -4613,6 +4654,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 175
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &442679303
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442679300}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3df205124e26187469ac4c86e591126e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &445668120
 GameObject:
   m_ObjectHideFlags: 0
@@ -4870,6 +4930,7 @@ GameObject:
   - component: {fileID: 476567775}
   - component: {fileID: 476567774}
   - component: {fileID: 476567776}
+  - component: {fileID: 476567777}
   m_Layer: 0
   m_Name: Fireplace3
   m_TagString: Untagged
@@ -4968,6 +5029,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6660595, y: 0.3115306}
   m_EdgeRadius: 0
+--- !u!95 &476567777
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476567773}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3df205124e26187469ac4c86e591126e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &491672834
 GameObject:
   m_ObjectHideFlags: 0
@@ -5410,6 +5490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 520920535}
   - component: {fileID: 520920534}
+  - component: {fileID: 520920536}
   m_Layer: 0
   m_Name: Torch1 (5)
   m_TagString: Untagged
@@ -5482,6 +5563,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 122
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &520920536
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520920533}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &524328953
 GameObject:
   m_ObjectHideFlags: 0
@@ -7392,6 +7492,7 @@ GameObject:
   - component: {fileID: 738159226}
   - component: {fileID: 738159225}
   - component: {fileID: 738159227}
+  - component: {fileID: 738159228}
   m_Layer: 0
   m_Name: Fireplace1
   m_TagString: Untagged
@@ -7490,6 +7591,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6660595, y: 0.3115306}
   m_EdgeRadius: 0
+--- !u!95 &738159228
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738159224}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3df205124e26187469ac4c86e591126e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &738781875
 GameObject:
   m_ObjectHideFlags: 0
@@ -8543,6 +8663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785875071}
   - component: {fileID: 785875070}
+  - component: {fileID: 785875072}
   m_Layer: 0
   m_Name: Torch1 (2)
   m_TagString: Untagged
@@ -8615,6 +8736,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 57
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &785875072
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785875069}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &790523042
 GameObject:
   m_ObjectHideFlags: 0
@@ -9502,6 +9642,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851537208}
   - component: {fileID: 851537207}
+  - component: {fileID: 851537209}
   m_Layer: 0
   m_Name: Torch1 (8)
   m_TagString: Untagged
@@ -9574,6 +9715,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 165
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &851537209
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851537206}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &858534175
 GameObject:
   m_ObjectHideFlags: 0
@@ -9804,6 +9964,7 @@ GameObject:
   m_Component:
   - component: {fileID: 871965442}
   - component: {fileID: 871965441}
+  - component: {fileID: 871965443}
   m_Layer: 0
   m_Name: Torch1 (12)
   m_TagString: Untagged
@@ -9876,6 +10037,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 194
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &871965443
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871965440}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &891113239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10448,6 +10628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921933193}
   - component: {fileID: 921933192}
+  - component: {fileID: 921933194}
   m_Layer: 0
   m_Name: Fireplace1
   m_TagString: Untagged
@@ -10520,6 +10701,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &921933194
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921933191}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3df205124e26187469ac4c86e591126e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &940553752
 GameObject:
   m_ObjectHideFlags: 0
@@ -12401,6 +12601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1059163830}
   - component: {fileID: 1059163829}
+  - component: {fileID: 1059163831}
   m_Layer: 0
   m_Name: Torch1 (1)
   m_TagString: Untagged
@@ -12473,6 +12674,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1059163831
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059163828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1073487575
 GameObject:
   m_ObjectHideFlags: 0
@@ -13980,6 +14200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201246407}
   - component: {fileID: 1201246406}
+  - component: {fileID: 1201246408}
   m_Layer: 0
   m_Name: Torch1 (6)
   m_TagString: Untagged
@@ -14052,6 +14273,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 123
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1201246408
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201246405}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1202348807
 GameObject:
   m_ObjectHideFlags: 0
@@ -16397,6 +16637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1373661766}
   - component: {fileID: 1373661765}
+  - component: {fileID: 1373661767}
   m_Layer: 0
   m_Name: Torch1 (3)
   m_TagString: Untagged
@@ -16469,6 +16710,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1373661767
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373661764}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1382792083
 GameObject:
   m_ObjectHideFlags: 0
@@ -16479,6 +16739,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1382792085}
   - component: {fileID: 1382792084}
+  - component: {fileID: 1382792086}
   m_Layer: 0
   m_Name: Torch1 (4)
   m_TagString: Untagged
@@ -16551,6 +16812,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 121
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1382792086
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382792083}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1387035772
 GameObject:
   m_ObjectHideFlags: 0
@@ -18336,6 +18616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1446521528}
   - component: {fileID: 1446521527}
+  - component: {fileID: 1446521529}
   m_Layer: 0
   m_Name: Torch1 (10)
   m_TagString: Untagged
@@ -18408,6 +18689,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 192
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1446521529
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446521526}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1446603903
 GameObject:
   m_ObjectHideFlags: 0
@@ -19991,6 +20291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1586168266}
   - component: {fileID: 1586168265}
+  - component: {fileID: 1586168267}
   m_Layer: 0
   m_Name: Torch1 (11)
   m_TagString: Untagged
@@ -20063,6 +20364,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 193
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1586168267
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586168264}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1586546918
 GameObject:
   m_ObjectHideFlags: 0
@@ -20073,6 +20393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1586546920}
   - component: {fileID: 1586546919}
+  - component: {fileID: 1586546921}
   m_Layer: 0
   m_Name: Torch1 (13)
   m_TagString: Untagged
@@ -20145,6 +20466,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 195
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1586546921
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586546918}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1600269193
 GameObject:
   m_ObjectHideFlags: 0
@@ -20565,6 +20905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1632414365}
   - component: {fileID: 1632414364}
+  - component: {fileID: 1632414366}
   m_Layer: 0
   m_Name: Torch1 (9)
   m_TagString: Untagged
@@ -20637,6 +20978,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 166
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1632414366
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632414363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1633032000
 GameObject:
   m_ObjectHideFlags: 0
@@ -21255,6 +21615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1668793353}
   - component: {fileID: 1668793352}
+  - component: {fileID: 1668793354}
   m_Layer: 0
   m_Name: Torch1 (14)
   m_TagString: Untagged
@@ -21327,6 +21688,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 196
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1668793354
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668793351}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1673584553
 GameObject:
   m_ObjectHideFlags: 0
@@ -22671,6 +23051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1761850733}
   - component: {fileID: 1761850732}
+  - component: {fileID: 1761850734}
   m_Layer: 0
   m_Name: Torch1 (7)
   m_TagString: Untagged
@@ -22743,6 +23124,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 164
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1761850734
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761850731}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1770603620
 GameObject:
   m_ObjectHideFlags: 0
@@ -23246,6 +23646,7 @@ GameObject:
   - component: {fileID: 1821389536}
   - component: {fileID: 1821389535}
   - component: {fileID: 1821389537}
+  - component: {fileID: 1821389538}
   m_Layer: 0
   m_Name: Fireplace1 (3)
   m_TagString: Untagged
@@ -23344,6 +23745,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.6660595, y: 0.3115306}
   m_EdgeRadius: 0
+--- !u!95 &1821389538
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821389534}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3df205124e26187469ac4c86e591126e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1823878358
 GameObject:
   m_ObjectHideFlags: 0
@@ -24928,6 +25348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1936886430}
   - component: {fileID: 1936886429}
+  - component: {fileID: 1936886431}
   m_Layer: 0
   m_Name: Torch1 (15)
   m_TagString: Untagged
@@ -25000,6 +25421,25 @@ Transform:
   m_Father: {fileID: 1416862031}
   m_RootOrder: 197
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1936886431
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936886428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 05452dbb2de94f743a401c9d263c6370, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1948104907
 GameObject:
   m_ObjectHideFlags: 0
