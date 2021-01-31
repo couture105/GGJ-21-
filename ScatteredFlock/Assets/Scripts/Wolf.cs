@@ -18,7 +18,7 @@ public class Wolf : GameEntity
     public override void DeltaUpdate(float dt)
     {
         base.DeltaUpdate(dt);
-        if (active)
+        if (active && (!level.finished))
         {
             UpdateAttack(dt);
         }

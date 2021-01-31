@@ -39,7 +39,7 @@ public class Level : MonoBehaviour
 
     public int activeSheeps = 0;
 
-    bool finished = false;
+    public bool finished = false;
     float timer = 0;
 
     
@@ -309,7 +309,11 @@ public class Level : MonoBehaviour
             effect.transform.position = pos;
             effect.transform.rotation = rot;
 
-            GameManager.Instance.soundManager.PlayHitEffect();
+            Vector3 viewportTargetPos = mainCamera.WorldToViewportPoint(pos);
+            if (viewportTargetPos.x < 1 && viewportTargetPos.x > 0 && viewportTargetPos.y < 1 && viewportTargetPos.y > 0)
+            {
+                GameManager.Instance.soundManager.PlayHitEffect();
+            }
         }
     }
 
@@ -332,12 +336,15 @@ public class Level : MonoBehaviour
             GameObject effect = GameObject.Instantiate(fireworkEffectPrefab, effectsParent);
             effect.transform.position = pos;
             effect.transform.rotation = rot;
+
+            GameManager.Instance.soundManager.PlayFireworkEffect();
         }
     }
 
     void CheckWinCondition()
     {
         bool win = true;
+
         if (pens != null && pens.Count > 0)
         {
             foreach (Pen pen in pens)
@@ -354,7 +361,7 @@ public class Level : MonoBehaviour
             win = false;
         }
 
-        if (win)
+        if (win && (!finished))
         {
             finished = true;
             StartCoroutine(WinSequence());
@@ -368,14 +375,15 @@ public class Level : MonoBehaviour
 
         if (fireworkEffectPrefab != null)
         {
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 12; i++)
             {
-                int fireworks = Random.Range(16, 33);
+                int fireworks = Random.Range(8, 16);
                 for (int j = 0; j < fireworks; j++)
                 {
-                    SpawnFireWorkEffect(new Vector3(Random.Range(-32f, 32f), Random.Range(-32f, 32f), 1), Quaternion.identity);
+                    SpawnFireWorkEffect(shepherd.transform.position + new Vector3(Random.Range(-16f, 16f), Random.Range(-16f, 16f), 1), Quaternion.identity);
                 }
-                yield return new WaitForSeconds(Random.Range(0.5f, 1.2f));
+                
+                yield return new WaitForSeconds(Random.Range(0.2f, 0.4f));
             }
             GameManager.Instance.SetState(GameManager.GameStates.PostGame);
         }

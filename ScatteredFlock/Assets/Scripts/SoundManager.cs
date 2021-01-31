@@ -15,6 +15,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip hitEffectClip;
     public AudioClip enterEffectClip;
+    public AudioClip fireworkEffectClip;
 
     public void StopAll()
     {
@@ -167,6 +168,14 @@ public class SoundManager : MonoBehaviour
         if (effectsSource != null && enterEffectClip != null)
         {
             effectsSource.PlayOneShot(enterEffectClip);
+        }
+    }
+
+    public void PlayFireworkEffect()
+    {
+        if (effectsSource != null && fireworkEffectClip != null)
+        {
+            effectsSource.PlayOneShot(fireworkEffectClip);
         }
     }
 }
