@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -66,6 +67,10 @@ public class GameManager : MonoBehaviour
     public Level level;
     public SoundManager soundManager;
     public GameStates state = GameStates.Splash;
+
+    public TimeSpan time;
+    public int foundSheeps;
+    public int eatenSheeps;
 
     public void SetState(GameStates newState)
     {

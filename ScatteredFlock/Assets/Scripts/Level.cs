@@ -41,7 +41,7 @@ public class Level : MonoBehaviour
 
     public bool finished = false;
     float timer = 0;
-
+    public int eatenSheeps = 0;
     
 
     // Start is called before the first frame update
@@ -214,6 +214,7 @@ public class Level : MonoBehaviour
         initialized = true;
         finished = false;
         timer = 0;
+        eatenSheeps = 0;
 }
 
     void SpwanSheeps()
@@ -385,11 +386,23 @@ public class Level : MonoBehaviour
                 
                 yield return new WaitForSeconds(Random.Range(0.2f, 0.4f));
             }
-            GameManager.Instance.SetState(GameManager.GameStates.PostGame);
         }
         else
         {
             yield return new WaitForSeconds(1.0f);
         }
+
+        GameManager.Instance.time = System.TimeSpan.FromSeconds(timer);
+        GameManager.Instance.foundSheeps = 0;
+        if (pens != null && pens.Count > 0)
+        {
+            foreach (Pen pen in pens)
+            {
+                GameManager.Instance.foundSheeps += pen.currentScore;
+            }
+        }
+        GameManager.Instance.eatenSheeps = eatenSheeps;
+
+        GameManager.Instance.SetState(GameManager.GameStates.PostGame);
     }
 }
