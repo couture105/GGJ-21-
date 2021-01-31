@@ -55,8 +55,8 @@ MonoBehaviour:
   startMusicSource: {fileID: 6610971706757435313}
   endMusicSource: {fileID: 8420289387804370829}
   effectsSource: {fileID: 2983982644282224223}
-  hitEffectClip: {fileID: 8300000, guid: 8f4938a06e9e87941bacb72f70611d57, type: 3}
-  enterEffectClip: {fileID: 8300000, guid: ecaa517d119db424ebf343695401b152, type: 3}
+  hitEffectClip: {fileID: 8300000, guid: eb1912ac953d51f468fd3779fc2e1324, type: 3}
+  enterEffectClip: {fileID: 8300000, guid: d894cd27878269948a810804ad8c7ff5, type: 3}
 --- !u!1 &2714678687896488053
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +479,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dbeb99cf1794b9e4d8ca0ca08ab3a3bc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1efbbfb0d28e8ac44b7efa28cf9ecd70, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -781,7 +781,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dbeb99cf1794b9e4d8ca0ca08ab3a3bc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a38ee1b4627785e4b927a5ba7ab50ca3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

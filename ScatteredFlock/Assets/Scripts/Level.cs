@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    bool _initialized = false;
+    bool initialized = false;
 
     public int maxSheeps = 128;
     public int maxWolfs = 8;
@@ -14,6 +14,7 @@ public class Level : MonoBehaviour
 
     public GameObject hitEffectPrefab;
     public GameObject enterEffectPrefab;
+    public GameObject fireworkEffectPrefab;
 
     public Transform effectsParent;
     public Transform sheepsParent;
@@ -38,6 +39,9 @@ public class Level : MonoBehaviour
 
     public int activeSheeps = 0;
 
+    bool finished = false;
+    float timer = 0;
+
     
 
     // Start is called before the first frame update
@@ -49,7 +53,7 @@ public class Level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!_initialized)
+        if (!initialized)
         {
             Initialize();
         }
@@ -80,6 +84,11 @@ public class Level : MonoBehaviour
         }
 
         CheckWinCondition();
+
+        if (!finished)
+        {
+            timer += Time.deltaTime;
+        }
     }
 
     void Initialize()
@@ -202,8 +211,10 @@ public class Level : MonoBehaviour
             shepherdSpawner.SpawnShepherd();
         }   
 
-        _initialized = true;
-    }
+        initialized = true;
+        finished = false;
+        timer = 0;
+}
 
     void SpwanSheeps()
     {
@@ -314,6 +325,16 @@ public class Level : MonoBehaviour
         }
     }
 
+    public void SpawnFireWorkEffect(Vector3 pos, Quaternion rot)
+    {
+        if (fireworkEffectPrefab != null && effectsParent != null)
+        {
+            GameObject effect = GameObject.Instantiate(fireworkEffectPrefab, effectsParent);
+            effect.transform.position = pos;
+            effect.transform.rotation = rot;
+        }
+    }
+
     void CheckWinCondition()
     {
         bool win = true;
@@ -335,7 +356,32 @@ public class Level : MonoBehaviour
 
         if (win)
         {
+            finished = true;
+            StartCoroutine(WinSequence());
+        }
+    }
+
+    IEnumerator WinSequence()
+    {
+        GameManager.Instance.soundManager.StopAmbientMusic();
+        GameManager.Instance.soundManager.PlayEndMusic();
+
+        if (fireworkEffectPrefab != null)
+        {
+            for (int i = 0; i < 16; i++)
+            {
+                int fireworks = Random.Range(16, 33);
+                for (int j = 0; j < fireworks; j++)
+                {
+                    SpawnFireWorkEffect(new Vector3(Random.Range(-32f, 32f), Random.Range(-32f, 32f), 1), Quaternion.identity);
+                }
+                yield return new WaitForSeconds(Random.Range(0.5f, 1.2f));
+            }
             GameManager.Instance.SetState(GameManager.GameStates.PostGame);
+        }
+        else
+        {
+            yield return new WaitForSeconds(1.0f);
         }
     }
 }

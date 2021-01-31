@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
             case GameStates.PostGame:
             {
                 SceneManager.LoadScene("PostGameScene");
-                soundManager.StopAll();
+                soundManager.StopSounds();
                 soundManager.PlayEndMusic();
                 break;
             }
