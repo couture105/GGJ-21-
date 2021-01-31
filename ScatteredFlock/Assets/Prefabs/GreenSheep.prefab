@@ -128,7 +128,7 @@ MonoBehaviour:
   avoidDirectionMultiplier: 10
   externalDirectionMultiplier: 10
   penDirectionMultiplier: 5
-  maxWanderDistance: 32
+  maxWanderDistance: 5
   type: 1
   respawns: 1
 --- !u!95 &4919335375070123998
