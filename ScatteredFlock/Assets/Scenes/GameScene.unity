@@ -9268,7 +9268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
-  sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
+  sheepPrefab: {fileID: 1774696422888805390, guid: ae922d446a9896349b9c1408f2a36349, type: 3}
   maxSheeps: 3
   respawns: 1
   sheepType: 0
@@ -11893,7 +11893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
-  sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
+  sheepPrefab: {fileID: 1774696422888805390, guid: ae922d446a9896349b9c1408f2a36349, type: 3}
   maxSheeps: 4
   respawns: 0
   sheepType: 0
@@ -13129,7 +13129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
-  sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
+  sheepPrefab: {fileID: 7354479819673937480, guid: f06dc4a1d260e604bbe3d14298f2ecc0, type: 3}
   maxSheeps: 4
   respawns: 0
   sheepType: 0
@@ -13178,7 +13178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
-  sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
+  sheepPrefab: {fileID: 7354479819673937480, guid: f06dc4a1d260e604bbe3d14298f2ecc0, type: 3}
   maxSheeps: 3
   respawns: 0
   sheepType: 0
@@ -13391,7 +13391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
-  sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
+  sheepPrefab: {fileID: 7354479819673937480, guid: f06dc4a1d260e604bbe3d14298f2ecc0, type: 3}
   maxSheeps: 2
   respawns: 0
   sheepType: 0
@@ -24528,7 +24528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
-  sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
+  sheepPrefab: {fileID: 1774696422888805390, guid: ae922d446a9896349b9c1408f2a36349, type: 3}
   maxSheeps: 2
   respawns: 0
   sheepType: 0
@@ -27704,7 +27704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
-  sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
+  sheepPrefab: {fileID: 7354479819673937480, guid: f06dc4a1d260e604bbe3d14298f2ecc0, type: 3}
   maxSheeps: 4
   respawns: 0
   sheepType: 0
