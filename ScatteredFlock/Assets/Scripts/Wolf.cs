@@ -107,6 +107,7 @@ public class Wolf : GameEntity
                     {
                         level.SpawnHitEffect(sheep.transform.position, Quaternion.identity);
                         level.DestroySheep(sheep);
+                        level.eatenSheeps++;
                         attackCooldownTimer = attackCoolDown;
                     }
                 }
