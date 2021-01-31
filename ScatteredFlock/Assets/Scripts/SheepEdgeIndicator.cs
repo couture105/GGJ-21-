@@ -71,6 +71,7 @@ public class SheepEdgeIndicator : MonoBehaviour
                         transform.position = screenPos;
                         transform.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg);
 
+                        /*
                         if (arrow != null)
                         {
                             switch (sheep.type)
@@ -95,6 +96,7 @@ public class SheepEdgeIndicator : MonoBehaviour
                                 }
                             }
                         }
+                        */
                     }
                     else
                     {
