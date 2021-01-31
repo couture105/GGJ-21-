@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8754799101147883873}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.42, y: -1.35, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 0.6076756, y: 0.6076756, z: 0}
   m_Children:
   - {fileID: 8754799101295406894}
   m_Father: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   acceptedSheepType: 1
   penRadius: 1
   level: {fileID: 0}
-  winScore: 10
+  winScore: 100
   currentScore: 0
   scoreText: {fileID: 8754799101295406893}
 --- !u!58 &3455391979146664526
