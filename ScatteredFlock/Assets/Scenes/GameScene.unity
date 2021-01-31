@@ -154,7 +154,7 @@ Transform:
   - {fileID: 891113240}
   - {fileID: 2085562629}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8710103
 PrefabInstance:
@@ -358,15 +358,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19753104}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
   m_Children:
   - {fileID: 570415160}
   - {fileID: 1502246860}
   - {fileID: 1759025250}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &25296272
 GameObject:
@@ -1796,7 +1796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aef47998df754f4a8bc40b7875215e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 1
+  spawnRadius: 0.1
   sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
   maxSheeps: 2
   respawns: 0
@@ -1927,9 +1927,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aef47998df754f4a8bc40b7875215e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   sheepPrefab: {fileID: 7354479819673937480, guid: f06dc4a1d260e604bbe3d14298f2ecc0, type: 3}
-  maxSheeps: 64
+  maxSheeps: 32
   respawns: 1
   sheepType: 0
   level: {fileID: 0}
@@ -5109,7 +5109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19315c21797d0142a72dfad9315df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   wolfPrefab: {fileID: 5005712653478479130, guid: 6bbb17dd279c6cd4d8edb775d6098718, type: 3}
   maxWolfs: 4
   level: {fileID: 0}
@@ -5459,10 +5459,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aef47998df754f4a8bc40b7875215e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   sheepPrefab: {fileID: 7354479819673937480, guid: f06dc4a1d260e604bbe3d14298f2ecc0, type: 3}
   maxSheeps: 8
-  respawns: 1
+  respawns: 0
   sheepType: 0
   level: {fileID: 0}
 --- !u!1 &530406767
@@ -5797,7 +5797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0da40b86ca0dc4098033e37e1c5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 1
+  spawnRadius: 0.1
   ramPrefab: {fileID: 4260544074665672372, guid: bd76ae723b30e0c48a36e2157945a984, type: 3}
   maxRams: 1
   level: {fileID: 0}
@@ -6572,7 +6572,7 @@ Transform:
   m_GameObject: {fileID: 646944742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
   m_Children:
   - {fileID: 508477908}
   - {fileID: 1008582764}
@@ -6580,7 +6580,7 @@ Transform:
   - {fileID: 1249943605}
   - {fileID: 1435242608}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &653538683
 GameObject:
@@ -7177,7 +7177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19315c21797d0142a72dfad9315df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   wolfPrefab: {fileID: 5005712653478479130, guid: 6bbb17dd279c6cd4d8edb775d6098718, type: 3}
   maxWolfs: 4
   level: {fileID: 0}
@@ -9130,9 +9130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aef47998df754f4a8bc40b7875215e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   sheepPrefab: {fileID: 1774696422888805390, guid: ae922d446a9896349b9c1408f2a36349, type: 3}
-  maxSheeps: 64
+  maxSheeps: 32
   respawns: 1
   sheepType: 0
   level: {fileID: 0}
@@ -11334,7 +11334,7 @@ Transform:
   m_GameObject: {fileID: 990398227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
   m_Children: []
   m_Father: {fileID: 2090437763}
   m_RootOrder: 4
@@ -11573,7 +11573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19315c21797d0142a72dfad9315df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   wolfPrefab: {fileID: 5005712653478479130, guid: 6bbb17dd279c6cd4d8edb775d6098718, type: 3}
   maxWolfs: 4
   level: {fileID: 0}
@@ -12130,7 +12130,7 @@ Transform:
   m_GameObject: {fileID: 1073487575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
   m_Children:
   - {fileID: 739019591}
   - {fileID: 917089255}
@@ -12181,10 +12181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aef47998df754f4a8bc40b7875215e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
   maxSheeps: 8
-  respawns: 1
+  respawns: 0
   sheepType: 0
   level: {fileID: 0}
 --- !u!1 &1075598867
@@ -14028,7 +14028,7 @@ Transform:
   m_GameObject: {fileID: 1229106452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
   m_Children:
   - {fileID: 41235193}
   - {fileID: 293391765}
@@ -14350,7 +14350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19315c21797d0142a72dfad9315df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   wolfPrefab: {fileID: 5005712653478479130, guid: 6bbb17dd279c6cd4d8edb775d6098718, type: 3}
   maxWolfs: 4
   level: {fileID: 0}
@@ -15111,10 +15111,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aef47998df754f4a8bc40b7875215e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   sheepPrefab: {fileID: 1774696422888805390, guid: ae922d446a9896349b9c1408f2a36349, type: 3}
   maxSheeps: 8
-  respawns: 1
+  respawns: 0
   sheepType: 0
   level: {fileID: 0}
 --- !u!1 &1344834031
@@ -15146,7 +15146,7 @@ Transform:
   m_Children:
   - {fileID: 1387578822}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1346759315
 GameObject:
@@ -16096,8 +16096,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387578821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.54, y: -7.84, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.5926, y: -9.3296, z: 0}
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
   m_Children: []
   m_Father: {fileID: 1344834032}
   m_RootOrder: 0
@@ -17021,7 +17021,7 @@ Transform:
   m_GameObject: {fileID: 1416862030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.19, y: 1.19, z: 1.19}
   m_Children:
   - {fileID: 1411205697}
   - {fileID: 1751254102}
@@ -17515,7 +17515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19315c21797d0142a72dfad9315df79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   wolfPrefab: {fileID: 5005712653478479130, guid: 6bbb17dd279c6cd4d8edb775d6098718, type: 3}
   maxWolfs: 4
   level: {fileID: 0}
@@ -18628,7 +18628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0da40b86ca0dc4098033e37e1c5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 1
+  spawnRadius: 0.1
   ramPrefab: {fileID: 4260544074665672372, guid: bd76ae723b30e0c48a36e2157945a984, type: 3}
   maxRams: 1
   level: {fileID: 0}
@@ -21773,7 +21773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0da40b86ca0dc4098033e37e1c5ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 1
+  spawnRadius: 0.1
   ramPrefab: {fileID: 4260544074665672372, guid: bd76ae723b30e0c48a36e2157945a984, type: 3}
   maxRams: 1
   level: {fileID: 0}
@@ -21820,9 +21820,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aef47998df754f4a8bc40b7875215e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 4
+  spawnRadius: 0.1
   sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
-  maxSheeps: 64
+  maxSheeps: 32
   respawns: 1
   sheepType: 0
   level: {fileID: 0}
@@ -22709,7 +22709,7 @@ Transform:
   - {fileID: 1722873138}
   - {fileID: 267822112}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1838822914
 GameObject:
@@ -23371,7 +23371,7 @@ Transform:
   - {fileID: 236913295}
   - {fileID: 266033126}
   m_Father: {fileID: 2090437763}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1889066155
 GameObject:
@@ -23774,7 +23774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aef47998df754f4a8bc40b7875215e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 1
+  spawnRadius: 0.1
   sheepPrefab: {fileID: 1774696422888805390, guid: ae922d446a9896349b9c1408f2a36349, type: 3}
   maxSheeps: 2
   respawns: 0
@@ -26761,16 +26761,16 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1344834032}
   - {fileID: 3574365}
+  - {fileID: 1344834032}
   - {fileID: 1229106453}
   - {fileID: 1416862031}
   - {fileID: 990398228}
   - {fileID: 1073487576}
+  - {fileID: 19753105}
   - {fileID: 646944743}
   - {fileID: 1829149263}
   - {fileID: 1875529495}
-  - {fileID: 19753105}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27289,7 +27289,7 @@ Transform:
   m_GameObject: {fileID: 2136581275}
   m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
   m_LocalPosition: {x: -3.4556234, y: 11.205642, z: 9.54099}
-  m_LocalScale: {x: 3.471697, y: 3.471697, z: 3.471697}
+  m_LocalScale: {x: 4.1313195, y: 4.1313195, z: 4.1313195}
   m_Children: []
   m_Father: {fileID: 1999019828}
   m_RootOrder: 1
