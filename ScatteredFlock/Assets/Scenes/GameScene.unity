@@ -10065,7 +10065,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5308655312475342021, guid: 2f1916328424d6944b7b95e7f123fb03, type: 3}
       propertyPath: winScore
-      value: 30
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 5308655312475342024, guid: 2f1916328424d6944b7b95e7f123fb03, type: 3}
       propertyPath: m_Name
@@ -16544,7 +16544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8754799101147883903, guid: be273551df059ed44aebca0f6e9cfe7f, type: 3}
       propertyPath: winScore
-      value: 30
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be273551df059ed44aebca0f6e9cfe7f, type: 3}
@@ -27968,7 +27968,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8194982319309117937, guid: 5e4c2d80ef080a843a558ecd59ac2312, type: 3}
       propertyPath: winScore
-      value: 30
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 8194982319309117942, guid: 5e4c2d80ef080a843a558ecd59ac2312, type: 3}
       propertyPath: m_RootOrder
@@ -28088,6 +28088,7 @@ MonoBehaviour:
   pens: []
   activeSheeps: 0
   finished: 0
+  eatenSheeps: 0
 --- !u!4 &2090437763
 Transform:
   m_ObjectHideFlags: 0
