@@ -603,7 +603,7 @@ GameObject:
   - component: {fileID: 41010044}
   - component: {fileID: 41010045}
   m_Layer: 0
-  m_Name: spawner (10)
+  m_Name: soulG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -617,11 +617,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41010043}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.76, y: -12.27, z: 0}
+  m_LocalPosition: {x: -12.76, y: -12.270001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 738781876}
-  m_RootOrder: 9
+  m_Father: {fileID: 739019591}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &41010045
 MonoBehaviour:
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
-  sheepPrefab: {fileID: 1075750729868198784, guid: 5cf02b8b4c5ca6c4a96688474bab6871, type: 3}
+  sheepPrefab: {fileID: 1774696422888805390, guid: ae922d446a9896349b9c1408f2a36349, type: 3}
   maxSheeps: 2
   respawns: 0
   sheepType: 0
@@ -1116,7 +1116,7 @@ GameObject:
   - component: {fileID: 79072277}
   - component: {fileID: 79072278}
   m_Layer: 0
-  m_Name: spawner (9)
+  m_Name: soulG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1130,11 +1130,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 79072276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.71, y: 3.81, z: 0}
+  m_LocalPosition: {x: -21.710001, y: 3.8100002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 738781876}
-  m_RootOrder: 8
+  m_Father: {fileID: 739019591}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &79072278
 MonoBehaviour:
@@ -1911,7 +1911,7 @@ GameObject:
   - component: {fileID: 189454870}
   - component: {fileID: 189454871}
   m_Layer: 0
-  m_Name: spawner (1)
+  m_Name: soulR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1925,11 +1925,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189454869}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.9, y: -3.75, z: 0}
+  m_LocalPosition: {x: -12.9, y: -3.7500002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 738781876}
-  m_RootOrder: 0
+  m_Father: {fileID: 739019591}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &189454871
 MonoBehaviour:
@@ -2042,7 +2042,7 @@ GameObject:
   - component: {fileID: 191585435}
   - component: {fileID: 191585436}
   m_Layer: 0
-  m_Name: Bspawner
+  m_Name: soulRespB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5493,7 +5493,7 @@ GameObject:
   - component: {fileID: 524328954}
   - component: {fileID: 524328955}
   m_Layer: 0
-  m_Name: Bspawner
+  m_Name: soulR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5831,7 +5831,7 @@ GameObject:
   - component: {fileID: 550204683}
   - component: {fileID: 550204684}
   m_Layer: 0
-  m_Name: spawner (8)
+  m_Name: soulR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5848,8 +5848,8 @@ Transform:
   m_LocalPosition: {x: -15.15, y: 13.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 738781876}
-  m_RootOrder: 7
+  m_Father: {fileID: 739019591}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &550204684
 MonoBehaviour:
@@ -7500,7 +7500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 738781876}
   m_Layer: 0
-  m_Name: TutSouls
+  m_Name: Tut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7516,17 +7516,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 189454870}
-  - {fileID: 1926824876}
-  - {fileID: 1708643004}
-  - {fileID: 2048058954}
-  - {fileID: 1128089891}
-  - {fileID: 1141353529}
-  - {fileID: 973865429}
-  - {fileID: 550204683}
-  - {fileID: 79072277}
-  - {fileID: 41010044}
+  m_Children: []
   m_Father: {fileID: 1073487576}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7540,7 +7530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 739019591}
   m_Layer: 0
-  m_Name: NearSouls
+  m_Name: NoRespSoul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7559,12 +7549,22 @@ Transform:
   m_Children:
   - {fileID: 1074447678}
   - {fileID: 524328954}
+  - {fileID: 916316288}
+  - {fileID: 189454870}
+  - {fileID: 2048058954}
+  - {fileID: 550204683}
   - {fileID: 1338165012}
   - {fileID: 1679307693}
+  - {fileID: 1926824876}
+  - {fileID: 1708643004}
+  - {fileID: 79072277}
+  - {fileID: 41010044}
+  - {fileID: 973865429}
+  - {fileID: 1002110698}
+  - {fileID: 1128089891}
+  - {fileID: 1141353529}
   - {fileID: 2099856329}
   - {fileID: 1119946413}
-  - {fileID: 916316288}
-  - {fileID: 1002110698}
   m_Father: {fileID: 1073487576}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9235,7 +9235,7 @@ GameObject:
   - component: {fileID: 830527560}
   - component: {fileID: 830527561}
   m_Layer: 0
-  m_Name: Gspawner (1)
+  m_Name: soulRespG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9269,7 +9269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
   sheepPrefab: {fileID: 1774696422888805390, guid: ae922d446a9896349b9c1408f2a36349, type: 3}
-  maxSheeps: 3
+  maxSheeps: 5
   respawns: 1
   sheepType: 0
   level: {fileID: 0}
@@ -9883,6 +9883,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3574365}
     m_Modifications:
+    - target: {fileID: 5308655312475342021, guid: 2f1916328424d6944b7b95e7f123fb03, type: 3}
+      propertyPath: winScore
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 5308655312475342024, guid: 2f1916328424d6944b7b95e7f123fb03, type: 3}
       propertyPath: m_Name
       value: RedPortal
@@ -10285,7 +10289,7 @@ GameObject:
   - component: {fileID: 916316288}
   - component: {fileID: 916316289}
   m_Layer: 0
-  m_Name: Bspawner (3)
+  m_Name: soulR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10303,7 +10307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 739019591}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &916316289
 MonoBehaviour:
@@ -10333,7 +10337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 917089255}
   m_Layer: 0
-  m_Name: FarSouls
+  m_Name: RespSoul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11071,7 +11075,7 @@ GameObject:
   - component: {fileID: 973865429}
   - component: {fileID: 973865430}
   m_Layer: 0
-  m_Name: spawner (7)
+  m_Name: soulB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11085,11 +11089,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973865428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.9, y: 2.48, z: 0}
+  m_LocalPosition: {x: 22.900002, y: 2.4800003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 738781876}
-  m_RootOrder: 6
+  m_Father: {fileID: 739019591}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &973865430
 MonoBehaviour:
@@ -11104,7 +11108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
-  sheepPrefab: {fileID: 1774696422888805390, guid: ae922d446a9896349b9c1408f2a36349, type: 3}
+  sheepPrefab: {fileID: 7354479819673937480, guid: f06dc4a1d260e604bbe3d14298f2ecc0, type: 3}
   maxSheeps: 2
   respawns: 0
   sheepType: 1
@@ -11860,7 +11864,7 @@ GameObject:
   - component: {fileID: 1002110698}
   - component: {fileID: 1002110699}
   m_Layer: 0
-  m_Name: Rspawner (2)
+  m_Name: soulB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11878,7 +11882,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 739019591}
-  m_RootOrder: 7
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1002110699
 MonoBehaviour:
@@ -11893,7 +11897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRadius: 0.1
-  sheepPrefab: {fileID: 1774696422888805390, guid: ae922d446a9896349b9c1408f2a36349, type: 3}
+  sheepPrefab: {fileID: 7354479819673937480, guid: f06dc4a1d260e604bbe3d14298f2ecc0, type: 3}
   maxSheeps: 4
   respawns: 0
   sheepType: 0
@@ -12483,7 +12487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1073487576}
   m_Layer: 0
-  m_Name: SoulSpawners
+  m_Name: Spawners
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12517,7 +12521,7 @@ GameObject:
   - component: {fileID: 1074447678}
   - component: {fileID: 1074447679}
   m_Layer: 0
-  m_Name: Rspawner
+  m_Name: soulR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13096,7 +13100,7 @@ GameObject:
   - component: {fileID: 1119946413}
   - component: {fileID: 1119946414}
   m_Layer: 0
-  m_Name: Bspawner (2)
+  m_Name: soulB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13114,7 +13118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 739019591}
-  m_RootOrder: 5
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1119946414
 MonoBehaviour:
@@ -13145,7 +13149,7 @@ GameObject:
   - component: {fileID: 1128089891}
   - component: {fileID: 1128089892}
   m_Layer: 0
-  m_Name: spawner (5)
+  m_Name: soulB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13159,11 +13163,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128089890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.43, y: 11.84, z: 0}
+  m_LocalPosition: {x: -6.4300003, y: 11.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 738781876}
-  m_RootOrder: 4
+  m_Father: {fileID: 739019591}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1128089892
 MonoBehaviour:
@@ -13358,7 +13362,7 @@ GameObject:
   - component: {fileID: 1141353529}
   - component: {fileID: 1141353530}
   m_Layer: 0
-  m_Name: spawner (6)
+  m_Name: soulB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13372,11 +13376,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141353528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.42, y: -21.74, z: 0}
+  m_LocalPosition: {x: -10.42, y: -21.740002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 738781876}
-  m_RootOrder: 5
+  m_Father: {fileID: 739019591}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1141353530
 MonoBehaviour:
@@ -15641,7 +15645,7 @@ GameObject:
   - component: {fileID: 1338165012}
   - component: {fileID: 1338165013}
   m_Layer: 0
-  m_Name: Gspawner (1)
+  m_Name: soulG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15659,7 +15663,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 739019591}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1338165013
 MonoBehaviour:
@@ -16297,6 +16301,10 @@ PrefabInstance:
     - target: {fileID: 8754799101147883873, guid: be273551df059ed44aebca0f6e9cfe7f, type: 3}
       propertyPath: m_Name
       value: GreenPortal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8754799101147883903, guid: be273551df059ed44aebca0f6e9cfe7f, type: 3}
+      propertyPath: winScore
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be273551df059ed44aebca0f6e9cfe7f, type: 3}
@@ -21420,7 +21428,7 @@ GameObject:
   - component: {fileID: 1679307693}
   - component: {fileID: 1679307694}
   m_Layer: 0
-  m_Name: Rspawner (1)
+  m_Name: soulG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21438,7 +21446,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 739019591}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1679307694
 MonoBehaviour:
@@ -21680,7 +21688,7 @@ GameObject:
   - component: {fileID: 1708643004}
   - component: {fileID: 1708643005}
   m_Layer: 0
-  m_Name: spawner (3)
+  m_Name: soulG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21694,11 +21702,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708643003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.25, y: -3.71, z: 0}
+  m_LocalPosition: {x: 23.250002, y: -3.7100003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 738781876}
-  m_RootOrder: 2
+  m_Father: {fileID: 739019591}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1708643005
 MonoBehaviour:
@@ -22541,7 +22549,7 @@ GameObject:
   - component: {fileID: 1761128945}
   - component: {fileID: 1761128946}
   m_Layer: 0
-  m_Name: Rspawner
+  m_Name: soulRespR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24495,7 +24503,7 @@ GameObject:
   - component: {fileID: 1926824876}
   - component: {fileID: 1926824877}
   m_Layer: 0
-  m_Name: spawner (2)
+  m_Name: soulG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24512,8 +24520,8 @@ Transform:
   m_LocalPosition: {x: 1.8000841, y: -10.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 738781876}
-  m_RootOrder: 1
+  m_Father: {fileID: 739019591}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1926824877
 MonoBehaviour:
@@ -27145,7 +27153,7 @@ GameObject:
   - component: {fileID: 2048058954}
   - component: {fileID: 2048058955}
   m_Layer: 0
-  m_Name: spawner (4)
+  m_Name: soulR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27159,11 +27167,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048058953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.38, y: 10.59, z: 0}
+  m_LocalPosition: {x: 14.380002, y: 10.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 738781876}
-  m_RootOrder: 3
+  m_Father: {fileID: 739019591}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2048058955
 MonoBehaviour:
@@ -27518,6 +27526,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3574365}
     m_Modifications:
+    - target: {fileID: 8194982319309117937, guid: 5e4c2d80ef080a843a558ecd59ac2312, type: 3}
+      propertyPath: winScore
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8194982319309117942, guid: 5e4c2d80ef080a843a558ecd59ac2312, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -27671,7 +27683,7 @@ GameObject:
   - component: {fileID: 2099856329}
   - component: {fileID: 2099856330}
   m_Layer: 0
-  m_Name: Bspawner (1)
+  m_Name: soulB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27689,7 +27701,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 739019591}
-  m_RootOrder: 4
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2099856330
 MonoBehaviour:
